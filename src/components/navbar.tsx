@@ -60,7 +60,7 @@ export function Navbar() {
               <div key={item.label} className="group relative">
                 <Link
                   href={item.href}
-                  className="inline-flex items-center gap-1 rounded-full px-4 py-2 text-[#e8edf2]/75 hover:text-[#ffffff] transition-colors duration-300"
+                  className="inline-flex items-center gap-1 rounded-full px-4 py-2 text-[#2a3548]/75 hover:text-[#0d1730] transition-colors duration-300"
                 >
                   {item.label}
                   {item.sub && (
@@ -77,11 +77,11 @@ export function Navbar() {
                         <Link
                           key={s.label}
                           href={s.href}
-                          className="flex items-center justify-between rounded-xl px-3 py-2.5 text-[13px] text-[#e8edf2]/85 hover:bg-[#7fb6d8]/5 hover:text-[#ffffff] transition group/item"
+                          className="flex items-center justify-between rounded-xl px-3 py-2.5 text-[13px] text-[#2a3548]/85 hover:bg-[#3e94c7]/5 hover:text-[#0d1730] transition group/item"
                         >
                           <span className="flex flex-col">
                             <span>{s.label}</span>
-                            <span className="text-[10px] tracking-wider text-[#7a8590] uppercase">{s.note}</span>
+                            <span className="text-[10px] tracking-wider text-[#6b7585] uppercase">{s.note}</span>
                           </span>
                           <ArrowUpRight className="h-3.5 w-3.5 opacity-40 group-hover/item:opacity-90 group-hover/item:translate-x-0.5 group-hover/item:-translate-y-0.5 transition" />
                         </Link>
@@ -101,7 +101,7 @@ export function Navbar() {
             <button
               type="button"
               onClick={() => setOpen((v) => !v)}
-              className="grid lg:hidden h-10 w-10 place-items-center rounded-xl border border-[#7fb6d8]/15 bg-[#7fb6d8]/5 text-[#ffffff]"
+              className="grid lg:hidden h-10 w-10 place-items-center rounded-xl border border-[#3e94c7]/15 bg-[#3e94c7]/5 text-[#0d1730]"
               aria-label="Toggle menu"
             >
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -125,7 +125,7 @@ export function Navbar() {
                   key={item.label}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="flex items-center justify-between rounded-xl px-3 py-3 text-[#e8edf2]/85 hover:bg-[#7fb6d8]/5 hover:text-[#ffffff]"
+                  className="flex items-center justify-between rounded-xl px-3 py-3 text-[#2a3548]/85 hover:bg-[#3e94c7]/5 hover:text-[#0d1730]"
                 >
                   <span>{item.label}</span>
                   <ArrowUpRight className="h-4 w-4 opacity-50" />

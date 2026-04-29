@@ -59,23 +59,23 @@ export function Stats() {
               <span className="text-gradient-accent italic font-semibold">premium</span>
               <span className="text-gradient"> consultancy.</span>
             </h2>
-            <p className="mt-7 max-w-md text-[15.5px] text-[#e8edf2]/60 leading-[1.7] font-light">
+            <p className="mt-7 max-w-md text-[15.5px] text-[#2a3548]/60 leading-[1.7] font-light">
               Canadian immigration is full of noise. We publish our real
               outcomes — so you can decide on evidence, not advertising.
             </p>
 
             <div className="mt-10 flex items-center gap-4">
               <div className="flex -space-x-2">
-                {["#3a6810", "#3e94c7", "#1a330a", "#2a6e95"].map((c) => (
+                {["#67b219", "#3e94c7", "#4f8a13", "#2a6e95"].map((c) => (
                   <span
                     key={c}
-                    className="h-8 w-8 rounded-full border-2 border-[#06080c] bg-gradient-to-br shadow-[0_4px_12px_-4px_rgba(0,0,0,0.6)]"
+                    className="h-8 w-8 rounded-full border-2 border-[#fafbf7] bg-gradient-to-br shadow-[0_4px_12px_-4px_rgba(0,0,0,0.6)]"
                     style={{ background: `linear-gradient(135deg, ${c}, ${c}80)` }}
                   />
                 ))}
               </div>
-              <div className="text-[12.5px] text-[#e8edf2]/55 font-light">
-                Trusted by clients from <span className="text-[#7fb6d8]">60+ countries</span>
+              <div className="text-[12.5px] text-[#2a3548]/55 font-light">
+                Trusted by clients from <span className="text-[#3e94c7]">60+ countries</span>
               </div>
             </div>
           </div>
@@ -90,15 +90,15 @@ export function Stats() {
                 transition={{ duration: 0.7, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
                 className="card-hover glass relative rounded-[22px] p-7 overflow-hidden"
               >
-                <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[#3e94c7]/8 blur-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                <div className="font-display text-[52px] md:text-[58px] leading-none tracking-[-0.03em] text-[#ffffff]">
+                <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[#3e94c7]/[0.08] blur-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="font-display text-[52px] md:text-[58px] leading-none tracking-[-0.03em] text-[#0d1730]">
                   <Counter to={s.k} suffix={s.suffix} />
                 </div>
                 <div className="mt-4 hairline" />
-                <div className="mt-3 text-[13.5px] font-medium text-[#ffffff]">
+                <div className="mt-3 text-[13.5px] font-medium text-[#0d1730]">
                   {s.label}
                 </div>
-                <div className="mt-1 text-[11.5px] text-[#7a8590] font-light">{s.sub}</div>
+                <div className="mt-1 text-[11.5px] text-[#6b7585] font-light">{s.sub}</div>
               </motion.div>
             ))}
           </div>

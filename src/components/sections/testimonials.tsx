@@ -61,7 +61,7 @@ function Initials({ name }: { name: string }) {
     .join("")
     .slice(0, 2);
   return (
-    <span className="grid h-11 w-11 place-items-center rounded-full border border-[#7fb6d8]/20 bg-gradient-to-br from-[#0a1d10] to-[#0a0d12] font-display text-[14px] text-[#7fb6d8]">
+    <span className="grid h-11 w-11 place-items-center rounded-full border border-[#3e94c7]/20 bg-gradient-to-br from-[#eef7e0] to-[#ffffff] font-display text-[14px] text-[#3e94c7]">
       {i}
     </span>
   );
@@ -94,8 +94,8 @@ export function Testimonials() {
                 <Star key={i} className="h-4 w-4 fill-[#3e94c7] text-[#3e94c7]" />
               ))}
             </div>
-            <span className="text-[13px] text-[#e8edf2]/65 font-light">
-              <span className="text-[#ffffff] font-medium font-display text-[15px]">4.96</span>{" "}
+            <span className="text-[13px] text-[#2a3548]/65 font-light">
+              <span className="text-[#0d1730] font-medium font-display text-[15px]">4.96</span>{" "}
               / 5 · 1,240+ verified reviews
             </span>
           </div>
@@ -116,7 +116,7 @@ export function Testimonials() {
               {/* Editorial open quote */}
               <span
                 aria-hidden
-                className="absolute -top-2 left-6 font-display text-[80px] leading-none text-[#3e94c7]/22 select-none"
+                className="absolute -top-2 left-6 font-display text-[80px] leading-none text-[#3e94c7]/[0.22] select-none"
               >
                 &ldquo;
               </span>
@@ -127,21 +127,21 @@ export function Testimonials() {
                 ))}
               </div>
 
-              <blockquote className="mt-5 text-[14.5px] leading-[1.7] text-[#e8edf2]/82 font-light italic">
+              <blockquote className="mt-5 text-[14.5px] leading-[1.7] text-[#2a3548]/[0.82] font-light italic">
                 {t.quote}
               </blockquote>
 
-              <figcaption className="mt-7 flex items-center justify-between border-t border-[#7fb6d8]/10 pt-5">
+              <figcaption className="mt-7 flex items-center justify-between border-t border-[#3e94c7]/10 pt-5">
                 <div className="flex items-center gap-3">
                   <Initials name={t.name} />
                   <div>
-                    <div className="font-display text-[15px] font-medium text-[#ffffff]">{t.name}</div>
-                    <div className="text-[11px] text-[#7a8590] mt-0.5">
+                    <div className="font-display text-[15px] font-medium text-[#0d1730]">{t.name}</div>
+                    <div className="text-[11px] text-[#6b7585] mt-0.5">
                       {t.role} <span className="text-[#3e94c7]/60">·</span> {t.place}
                     </div>
                   </div>
                 </div>
-                <span className="rounded-full border border-[#7fb6d8]/14 bg-[#7fb6d8]/[0.04] px-2.5 py-1 text-[9.5px] uppercase tracking-[0.18em] text-[#3e94c7]/85 font-mono whitespace-nowrap">
+                <span className="rounded-full border border-[#3e94c7]/[0.14] bg-[#3e94c7]/[0.04] px-2.5 py-1 text-[9.5px] uppercase tracking-[0.18em] text-[#3e94c7]/85 font-mono whitespace-nowrap">
                   {t.badge}
                 </span>
               </figcaption>

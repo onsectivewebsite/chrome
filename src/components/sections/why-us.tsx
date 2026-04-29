@@ -67,7 +67,7 @@ export function WhyUs() {
             <span className="text-gradient-accent italic font-semibold">immigration firm</span>
             <span className="text-gradient">.</span>
           </h2>
-          <p className="mt-7 text-[15.5px] text-[#e8edf2]/60 leading-[1.7] font-light max-w-xl mx-auto">
+          <p className="mt-7 text-[15.5px] text-[#2a3548]/60 leading-[1.7] font-light max-w-xl mx-auto">
             Built by immigrants, for immigrants — with the process rigour you&apos;d
             expect from a top‑tier consulting firm.
           </p>
@@ -83,21 +83,21 @@ export function WhyUs() {
               transition={{ duration: 0.65, delay: i * 0.07, ease: [0.22, 1, 0.36, 1] }}
               className="card-hover glass group relative rounded-[22px] p-8 overflow-hidden"
             >
-              <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-gradient-to-br from-[#3e94c7]/12 to-transparent blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-gradient-to-br from-[#3e94c7]/[0.12] to-transparent blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="flex items-start justify-between">
-                <div className="grid h-12 w-12 place-items-center rounded-2xl border border-[#7fb6d8]/15 bg-gradient-to-br from-[#7fb6d8]/10 to-[#7fb6d8]/[0.02] text-[#7fb6d8] transition-all duration-500 group-hover:border-[#7fb6d8]/35">
+                <div className="grid h-12 w-12 place-items-center rounded-2xl border border-[#3e94c7]/15 bg-gradient-to-br from-[#3e94c7]/10 to-[#3e94c7]/[0.02] text-[#3e94c7] transition-all duration-500 group-hover:border-[#3e94c7]/35">
                   <p.icon className="h-5 w-5" strokeWidth={1.5} />
                 </div>
-                <span className="font-mono text-[10.5px] tracking-[0.2em] text-[#7a8590]">
+                <span className="font-mono text-[10.5px] tracking-[0.2em] text-[#6b7585]">
                   № {p.no}
                 </span>
               </div>
 
-              <h3 className="mt-7 font-display text-[24px] font-medium tracking-tight text-[#ffffff] leading-[1.15]">
+              <h3 className="mt-7 font-display text-[24px] font-medium tracking-tight text-[#0d1730] leading-[1.15]">
                 {p.title}
               </h3>
-              <p className="mt-3 text-[14px] text-[#e8edf2]/62 leading-[1.7] font-light">
+              <p className="mt-3 text-[14px] text-[#2a3548]/[0.62] leading-[1.7] font-light">
                 {p.desc}
               </p>
             </motion.div>

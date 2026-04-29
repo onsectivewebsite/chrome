@@ -102,7 +102,7 @@ export function Services() {
               <span className="text-gradient">pathway to Canada.</span>
             </h2>
           </div>
-          <p className="text-[15.5px] text-[#e8edf2]/60 leading-[1.7] md:max-w-md md:justify-self-end font-light">
+          <p className="text-[15.5px] text-[#2a3548]/60 leading-[1.7] md:max-w-md md:justify-self-end font-light">
             Whatever brings you to Canada — a career, a university, a family
             reunion, or a venture — we engineer the strongest possible case
             for your story. No templates. No shortcuts.
@@ -120,27 +120,27 @@ export function Services() {
               transition={{ duration: 0.65, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
               className="card-hover glass group relative flex h-full flex-col rounded-[22px] p-7 overflow-hidden"
             >
-              <div className="pointer-events-none absolute -right-12 -top-12 h-36 w-36 rounded-full bg-gradient-to-br from-[#3e94c7]/14 to-transparent blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="pointer-events-none absolute -right-12 -top-12 h-36 w-36 rounded-full bg-gradient-to-br from-[#3e94c7]/[0.14] to-transparent blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="flex items-start justify-between">
-                <div className="grid h-12 w-12 place-items-center rounded-2xl border border-[#7fb6d8]/15 bg-gradient-to-br from-[#7fb6d8]/10 to-[#7fb6d8]/[0.02] text-[#7fb6d8] transition-all duration-500 group-hover:border-[#7fb6d8]/35 group-hover:scale-105">
+                <div className="grid h-12 w-12 place-items-center rounded-2xl border border-[#3e94c7]/15 bg-gradient-to-br from-[#3e94c7]/10 to-[#3e94c7]/[0.02] text-[#3e94c7] transition-all duration-500 group-hover:border-[#3e94c7]/35 group-hover:scale-105">
                   <s.icon className="h-5 w-5" strokeWidth={1.6} />
                 </div>
-                <span className="font-mono text-[10.5px] tracking-[0.2em] text-[#7a8590]">
+                <span className="font-mono text-[10.5px] tracking-[0.2em] text-[#6b7585]">
                   № {s.no}
                 </span>
               </div>
 
-              <h3 className="mt-7 font-display text-[22px] font-medium tracking-tight text-[#ffffff] leading-tight">
+              <h3 className="mt-7 font-display text-[22px] font-medium tracking-tight text-[#0d1730] leading-tight">
                 {s.title}
               </h3>
               <div className="mt-1 text-[10.5px] uppercase tracking-[0.2em] text-[#3e94c7]/75 font-mono">
                 {s.tag}
               </div>
-              <p className="mt-4 text-[13.5px] text-[#e8edf2]/60 leading-[1.65] flex-1 font-light">
+              <p className="mt-4 text-[13.5px] text-[#2a3548]/60 leading-[1.65] flex-1 font-light">
                 {s.desc}
               </p>
-              <div className="mt-7 inline-flex items-center gap-1.5 text-[12.5px] text-[#3e94c7]/85 group-hover:text-[#7fb6d8] group-hover:gap-2.5 transition-all duration-400 font-mono uppercase tracking-[0.16em]">
+              <div className="mt-7 inline-flex items-center gap-1.5 text-[12.5px] text-[#3e94c7]/85 group-hover:text-[#3e94c7] group-hover:gap-2.5 transition-all duration-400 font-mono uppercase tracking-[0.16em]">
                 Explore
                 <ArrowUpRight className="h-3.5 w-3.5" />
               </div>
