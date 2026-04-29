@@ -70,7 +70,7 @@ export function NewsBrowser({
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-40 pb-16 overflow-hidden noise">
+      <section className="relative pt-48 pb-16 overflow-hidden noise">
         <div className="pointer-events-none absolute -top-32 -right-40 h-[640px] w-[640px] rounded-full bg-gradient-to-br from-[#67b219]/[0.18] to-transparent blur-[120px]" />
         <div className="pointer-events-none absolute top-20 -left-40 h-[520px] w-[520px] rounded-full bg-gradient-to-tr from-[#3e94c7]/[0.20] to-transparent blur-[120px]" />
         <div className="absolute inset-0 aurora-grid opacity-50" />

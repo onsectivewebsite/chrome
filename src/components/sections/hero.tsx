@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[100svh] w-full overflow-hidden pt-32 noise">
+    <section className="relative min-h-[100svh] w-full overflow-hidden pt-44 noise">
       {/* Soft ambient brand blobs */}
       <div className="pointer-events-none absolute -top-32 -right-40 h-[640px] w-[640px] rounded-full bg-gradient-to-br from-[#67b219]/[0.22] to-transparent blur-[120px]" />
       <div className="pointer-events-none absolute top-40 -left-40 h-[560px] w-[560px] rounded-full bg-gradient-to-tr from-[#3e94c7]/[0.22] to-transparent blur-[120px]" />

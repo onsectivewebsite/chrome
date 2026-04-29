@@ -69,7 +69,7 @@ export default async function NewsArticle({
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-12 overflow-hidden noise">
+      <section className="relative pt-44 pb-12 overflow-hidden noise">
         <div className="pointer-events-none absolute -top-32 -right-40 h-[560px] w-[560px] rounded-full bg-gradient-to-br from-[#67b219]/[0.16] to-transparent blur-[120px]" />
         <div className="pointer-events-none absolute top-20 -left-40 h-[460px] w-[460px] rounded-full bg-gradient-to-tr from-[#3e94c7]/[0.18] to-transparent blur-[120px]" />
         <div className="absolute inset-0 aurora-grid opacity-40" />
@@ -121,21 +121,38 @@ export default async function NewsArticle({
       <article className="relative pb-24">
         <div className="mx-auto max-w-3xl px-6">
           <div className="hairline mb-10" />
-          <div className="prose-like text-[16px] leading-[1.8] text-[#2a3548] font-light space-y-5">
+          <div className="prose-like text-[16.5px] leading-[1.8] text-[#2a3548] font-light space-y-6">
             {item.body
-              .split(". ")
-              .reduce<string[][]>((acc, sentence, i) => {
-                const idx = Math.floor(i / 3);
-                acc[idx] = acc[idx] || [];
-                acc[idx].push(sentence.trim());
-                return acc;
-              }, [])
-              .map((para, i) => (
-                <p key={i}>
-                  {para.join(". ")}
-                  {!para[para.length - 1].endsWith(".") ? "." : ""}
-                </p>
-              ))}
+              .split(/\n\n+/)
+              .map((p) => p.trim())
+              .filter(Boolean)
+              .map((para, i) => {
+                // Drop-cap on first paragraph for editorial polish
+                if (i === 0) {
+                  const first = para.charAt(0);
+                  const rest = para.slice(1);
+                  return (
+                    <p key={i} className="text-[17px] leading-[1.75]">
+                      <span className="float-left mr-2 mt-1 font-display text-[56px] leading-none text-[#67b219] font-medium">
+                        {first}
+                      </span>
+                      {rest}
+                    </p>
+                  );
+                }
+                // Italic blockquote for sentences containing direct quotes
+                if (/^["“]/.test(para) || /said\b|noted\b|warned\b|observed\b/.test(para)) {
+                  return (
+                    <blockquote
+                      key={i}
+                      className="border-l-2 border-[#67b219] pl-6 py-1 italic text-[#2a3548] text-[16.5px]"
+                    >
+                      {para}
+                    </blockquote>
+                  );
+                }
+                return <p key={i}>{para}</p>;
+              })}
           </div>
 
           {/* Tags */}

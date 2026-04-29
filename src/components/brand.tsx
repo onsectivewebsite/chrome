@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export function BrandMark({
-  size = 56,
+  size = 96,
 }: {
   size?: number;
   /** Kept for backwards compatibility — the logo already contains the wordmark */
