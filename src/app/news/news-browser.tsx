@@ -79,18 +79,17 @@ export function NewsBrowser({
           <span className="eyebrow">
             <span className="rule-gold" /> Newsroom · {items.length.toLocaleString()} stories
           </span>
-          <h1 className="mt-7 font-display text-[clamp(2.6rem,5.6vw,5rem)] font-medium leading-[1.05] tracking-[-0.025em]">
-            <span className="text-gradient">The Canadian immigration </span>
-            <span className="text-gradient-accent italic font-semibold">desk</span>
-            <span className="text-gradient">.</span>
+          <h1 className="mt-7 font-display text-[clamp(2.6rem,5.6vw,5rem)] font-medium leading-[1.05] tracking-[-0.018em] text-[#0d1730]">
+            Canadian immigration newsroom.
           </h1>
-          <p className="mt-7 max-w-2xl text-[16px] md:text-[17px] text-[#4a5462] leading-[1.7] font-light">
-            Every Express Entry draw, every PNP result, every IRCC bulletin and
-            every court ruling worth knowing — indexed and searchable. Updated
-            from <span className="text-[#0d1730] font-medium">CIC News</span>,{" "}
+          <p className="mt-7 max-w-2xl text-[17px] md:text-[18px] text-[#4a5462] leading-[1.7]">
+            Express Entry draws, PNP results, IRCC operational bulletins,
+            Federal Court decisions and processing-time updates — summarised
+            from{" "}
+            <span className="text-[#0d1730] font-medium">CIC News</span>,{" "}
             <span className="text-[#0d1730] font-medium">Canada.ca</span>, the{" "}
             <span className="text-[#0d1730] font-medium">Federal Court</span>, and
-            provincial nominee channels.
+            provincial nominee channels. Indexed and fully searchable.
           </p>
 
           {/* Search */}
@@ -204,7 +203,7 @@ export function NewsBrowser({
                   <h3 className="mt-3 font-display text-[16px] leading-[1.35] tracking-tight text-[#0d1730] group-hover:text-[#2a6e95] transition line-clamp-3">
                     {it.title}
                   </h3>
-                  <p className="mt-2 text-[12.5px] text-[#4a5462] leading-[1.55] font-light line-clamp-3">
+                  <p className="mt-2 text-[12.5px] text-[#4a5462] leading-[1.55] line-clamp-3">
                     {it.summary}
                   </p>
                   <div className="mt-auto flex items-center justify-between pt-5">

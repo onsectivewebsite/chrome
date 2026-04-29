@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, JetBrains_Mono } from "next/font/google";
+import { Inter, Fraunces, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -8,13 +8,15 @@ const sans = Inter({
   variable: "--font-sans-display",
   subsets: ["latin"],
   display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
-const display = Playfair_Display({
+const display = Fraunces({
   variable: "--font-display",
   subsets: ["latin"],
   display: "swap",
-  weight: ["500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
 const mono = JetBrains_Mono({
@@ -24,17 +26,17 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Chrome Visa Solution — Premium Canadian Immigration Consultancy",
+  title: "Chrome Visa Solutions — Regulated Canadian Immigration Consultancy",
   description:
-    "Chrome Visa Solution is a Canadian immigration firm guiding professionals, entrepreneurs, and families to permanent residency, work permits, study permits and citizenship.",
+    "Toronto-based Canadian immigration consultancy. Permanent residence, work permits, study permits, family sponsorship and citizenship — represented by a CICC-licensed RCIC.",
   keywords: [
     "Canadian immigration",
     "Express Entry",
-    "PNP",
+    "Provincial Nominee Program",
     "Work Permit",
     "Study Permit",
-    "Visa consultant",
-    "Chrome Visa Solution",
+    "RCIC",
+    "Chrome Visa Solutions",
   ],
 };
 

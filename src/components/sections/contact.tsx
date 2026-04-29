@@ -28,16 +28,15 @@ export function Contact() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <span className="eyebrow">
-              <span className="rule-gold" /> Get in touch
+              <span className="rule-gold" /> Contact
             </span>
-            <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.2rem)] font-medium leading-[1.1] tracking-[-0.024em]">
-              <span className="text-gradient">Tell us your </span>
-              <span className="text-gradient-accent italic font-semibold">story</span>
-              <span className="text-gradient">.</span>
+            <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.2rem)] font-medium leading-[1.1] tracking-[-0.018em] text-[#0d1730]">
+              Begin your file.
             </h2>
-            <p className="mt-7 max-w-md text-[15.5px] text-[#4a5462] leading-[1.7] font-light">
-              Share a few details and a case manager will reach out within one
-              business day with a tailored plan.
+            <p className="mt-7 max-w-md text-[16px] text-[#4a5462] leading-[1.7]">
+              Send us a brief outline of your situation. A case manager will
+              respond within one business day with the next steps and an
+              initial eligibility view.
             </p>
 
             <div className="mt-10 space-y-3 text-sm">
@@ -86,7 +85,7 @@ export function Contact() {
                 <span className="grid h-11 w-11 place-items-center rounded-xl bg-[#67b219]/[0.12] border border-[#67b219]/25 text-[#4f8a13]">
                   <Shield className="h-4 w-4" strokeWidth={1.8} />
                 </span>
-                <div className="text-[13px] text-[#2a3548]] leading-[1.55] font-light">
+                <div className="text-[13px] text-[#2a3548]] leading-[1.55]">
                   Your information is handled under <span className="text-[#3e94c7]">CICC confidentiality standards</span>.
                   We never share, sell, or spam.
                 </div>
@@ -139,11 +138,11 @@ export function Contact() {
                   name="message"
                   rows={4}
                   placeholder="Education, work history, family, timeline, any prior refusals…"
-                  className="mt-2.5 w-full rounded-2xl border border-[#3e94c7]/[0.12] bg-[#3e94c7]/[0.025] px-4 py-3.5 text-[#0d1730] placeholder:text-[#6b7585]/65 focus:border-[#3e94c7]/45 focus:outline-none focus:ring-2 focus:ring-[#3e94c7]/20 transition font-light"
+                  className="mt-2.5 w-full rounded-2xl border border-[#3e94c7]/[0.12] bg-[#3e94c7]/[0.025] px-4 py-3.5 text-[#0d1730] placeholder:text-[#6b7585]/65 focus:border-[#3e94c7]/45 focus:outline-none focus:ring-2 focus:ring-[#3e94c7]/20 transition"
                 />
               </div>
 
-              <label className="mt-5 flex items-start gap-3 text-[12px] text-[#6b7585] font-light">
+              <label className="mt-5 flex items-start gap-3 text-[12px] text-[#6b7585]">
                 <input
                   type="checkbox"
                   required
@@ -207,7 +206,7 @@ function Field({
         type={type}
         placeholder={placeholder}
         required={required}
-        className="mt-2.5 w-full rounded-2xl border border-[#3e94c7]/[0.12] bg-[#3e94c7]/[0.025] px-4 py-3.5 text-[#0d1730] placeholder:text-[#6b7585]/65 focus:border-[#3e94c7]/45 focus:outline-none focus:ring-2 focus:ring-[#3e94c7]/20 transition font-light"
+        className="mt-2.5 w-full rounded-2xl border border-[#3e94c7]/[0.12] bg-[#3e94c7]/[0.025] px-4 py-3.5 text-[#0d1730] placeholder:text-[#6b7585]/65 focus:border-[#3e94c7]/45 focus:outline-none focus:ring-2 focus:ring-[#3e94c7]/20 transition"
       />
     </label>
   );

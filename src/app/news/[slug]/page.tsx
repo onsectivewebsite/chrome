@@ -111,7 +111,7 @@ export default async function NewsArticle({
             {item.title}
           </h1>
 
-          <p className="mt-7 text-[17px] md:text-[18px] text-[#2a3548] leading-[1.7] font-light">
+          <p className="mt-7 text-[17px] md:text-[18px] text-[#2a3548] leading-[1.7]">
             {item.summary}
           </p>
         </div>
@@ -121,7 +121,7 @@ export default async function NewsArticle({
       <article className="relative pb-24">
         <div className="mx-auto max-w-3xl px-6">
           <div className="hairline mb-10" />
-          <div className="prose-like text-[16.5px] leading-[1.8] text-[#2a3548] font-light space-y-6">
+          <div className="prose-like text-[16.5px] leading-[1.8] text-[#2a3548] space-y-6">
             {item.body
               .split(/\n\n+/)
               .map((p) => p.trim())
@@ -173,7 +173,7 @@ export default async function NewsArticle({
             <div className="text-[10.5px] uppercase tracking-[0.18em] text-[#2a6e95] font-mono font-semibold">
               Source &amp; verification
             </div>
-            <p className="mt-3 text-[13.5px] text-[#2a3548] leading-[1.65] font-light">
+            <p className="mt-3 text-[13.5px] text-[#2a3548] leading-[1.65]">
               This brief is summarised from public IRCC, Canada.ca and provincial
               channels by Chrome Visa Solutions. For your file, do not rely on
               summaries alone — book a 30-minute consult with a CICC-licensed

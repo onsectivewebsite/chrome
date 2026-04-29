@@ -24,40 +24,39 @@ export function Hero() {
               className="eyebrow"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-[#67b219] shadow-[0_0_10px_2px_rgba(103,178,25,0.55)]" />
-              RCIC‑Led <span className="text-[#6b7585] mx-1">·</span> IRCC Compliant <span className="text-[#6b7585] mx-1">·</span> Est. 2013
+              CICC RCIC <span className="text-[#6b7585] mx-1">·</span> #R000000 <span className="text-[#6b7585] mx-1">·</span> Toronto
             </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 26 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.0, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-8 font-display text-[clamp(2.7rem,6.4vw,5.6rem)] font-medium leading-[1.08] tracking-[-0.025em]"
+              className="mt-8 font-display text-[clamp(2.7rem,6.4vw,5.4rem)] font-medium leading-[1.08] tracking-[-0.018em] text-[#0d1730]"
             >
-              <span className="text-gradient">Your</span>
-              <span className="relative mx-3 inline-block align-middle">
-                <span className="relative z-10 text-gradient-accent italic font-semibold">Canadian</span>
+              Canadian immigration,
+              <br className="hidden md:block" />
+              <span className="relative inline-block">
+                <span className="relative z-10">handled by counsel.</span>
                 <motion.span
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
                   transition={{ duration: 1.3, delay: 1.0, ease: [0.22, 1, 0.36, 1] }}
                   style={{ originX: 0 }}
-                  className="absolute -bottom-1.5 left-0 right-0 h-[2.5px] rounded-full bg-gradient-to-r from-[#67b219] via-[#3e94c7] to-transparent"
+                  className="absolute -bottom-1 left-0 right-0 h-[3px] rounded-full bg-gradient-to-r from-[#67b219] to-[#3e94c7]"
                 />
               </span>
-              <br className="hidden md:block" />
-              <span className="text-gradient">dream, </span>
-              <span className="text-gradient italic font-light">engineered.</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="mt-9 max-w-xl text-[16.5px] md:text-[17.5px] text-[#2a3548] leading-[1.65] font-light"
+              className="mt-9 max-w-xl text-[17px] md:text-[18px] text-[#2a3548] leading-[1.65]"
             >
-              A Toronto‑based immigration consultancy for the few who don&apos;t leave
-              their future to chance. Regulated counsel, an engineered process,
-              and a quiet obsession with the details that decide outcomes.
+              Chrome Visa Solutions is a Toronto‑based immigration firm. We
+              represent professionals, families and entrepreneurs through
+              every Canadian permanent residence, work and study pathway —
+              under the file of a CICC‑licensed RCIC.
             </motion.p>
 
             <motion.div
@@ -67,12 +66,12 @@ export function Hero() {
               className="mt-10 flex flex-wrap items-center gap-3"
             >
               <Link href="#contact" className="btn-primary group">
-                Book a Private Assessment
+                Book a consultation
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
               </Link>
               <Link href="#process" className="btn-ghost group">
                 <PlayCircle className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
-                See the process
+                Review our process
               </Link>
             </motion.div>
 
@@ -84,12 +83,12 @@ export function Hero() {
             >
               <div className="flex items-center gap-2.5">
                 <ShieldCheck className="h-4 w-4 text-[#67b219]" strokeWidth={1.8} />
-                <span>CICC‑Regulated Consultants</span>
+                <span>Regulated by CICC</span>
               </div>
               <div className="hidden sm:block h-3 w-px bg-[#0d1730]/15" />
               <div className="flex items-center gap-2.5">
                 <Award className="h-4 w-4 text-[#3e94c7]" strokeWidth={1.8} />
-                <span>97% First‑Time Approval</span>
+                <span>97% first‑time approval rate</span>
               </div>
             </motion.div>
 
@@ -100,9 +99,9 @@ export function Hero() {
               className="mt-14 grid max-w-xl grid-cols-3 gap-8 border-t border-[#0d1730]/10 pt-8"
             >
               {[
-                { k: "4,800+", v: "Lives transformed" },
-                { k: "60+", v: "Countries served" },
-                { k: "12 yrs", v: "Trusted expertise" },
+                { k: "4,800+", v: "Files represented" },
+                { k: "60+", v: "Countries of origin" },
+                { k: "12 yrs", v: "In practice" },
               ].map((s, i) => (
                 <div key={s.v} className="relative">
                   {i > 0 && (
@@ -184,7 +183,7 @@ export function Hero() {
                 </div>
 
                 <button className="relative mt-7 w-full btn-primary justify-center text-[13.5px]">
-                  Run my free CRS check
+                  Get a free CRS assessment
                   <ArrowRight className="h-4 w-4" />
                 </button>
               </div>

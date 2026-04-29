@@ -60,16 +60,15 @@ export function WhyUs() {
           className="mx-auto max-w-3xl text-center"
         >
           <span className="eyebrow">
-            <span className="rule-gold" /> The Difference
+            <span className="rule-gold" /> Why Chrome
           </span>
-          <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.2rem)] font-medium leading-[1.1] tracking-[-0.024em]">
-            <span className="text-gradient">A different kind of </span>
-            <span className="text-gradient-accent italic font-semibold">immigration firm</span>
-            <span className="text-gradient">.</span>
+          <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.2rem)] font-medium leading-[1.1] tracking-[-0.018em] text-[#0d1730]">
+            What makes our practice different.
           </h2>
-          <p className="mt-7 text-[15.5px] text-[#4a5462] leading-[1.7] font-light max-w-xl mx-auto">
-            Built by immigrants, for immigrants — with the process rigour you&apos;d
-            expect from a top‑tier consulting firm.
+          <p className="mt-7 text-[16px] text-[#4a5462] leading-[1.7] max-w-xl mx-auto">
+            Founded by immigrants, run by regulated counsel. Every file is
+            assembled with the procedural discipline you would expect from a
+            litigation practice — because IRCC officers read it that way.
           </p>
         </motion.div>
 
@@ -97,7 +96,7 @@ export function WhyUs() {
               <h3 className="mt-7 font-display text-[24px] font-medium tracking-tight text-[#0d1730] leading-[1.15]">
                 {p.title}
               </h3>
-              <p className="mt-3 text-[14px] text-[#4a5462]] leading-[1.7] font-light">
+              <p className="mt-3 text-[14px] text-[#4a5462]] leading-[1.7]">
                 {p.desc}
               </p>
             </motion.div>

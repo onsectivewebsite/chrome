@@ -52,16 +52,15 @@ export function Stats() {
         >
           <div>
             <span className="eyebrow">
-              <span className="rule-gold" /> Measured, not promised
+              <span className="rule-gold" /> Outcomes
             </span>
-            <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.2rem)] font-medium leading-[1.1] tracking-[-0.024em]">
-              <span className="text-gradient">The numbers behind a </span>
-              <span className="text-gradient-accent italic font-semibold">premium</span>
-              <span className="text-gradient"> consultancy.</span>
+            <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.2rem)] font-medium leading-[1.1] tracking-[-0.018em] text-[#0d1730]">
+              Twelve years on the record.
             </h2>
-            <p className="mt-7 max-w-md text-[15.5px] text-[#4a5462] leading-[1.7] font-light">
-              Canadian immigration is full of noise. We publish our real
-              outcomes — so you can decide on evidence, not advertising.
+            <p className="mt-7 max-w-md text-[16px] text-[#4a5462] leading-[1.7]">
+              We publish the real numbers behind our practice — first‑time
+              approval rate, response times, and case volume — so prospective
+              clients can choose on evidence rather than marketing.
             </p>
 
             <div className="mt-10 flex items-center gap-4">
@@ -74,7 +73,7 @@ export function Stats() {
                   />
                 ))}
               </div>
-              <div className="text-[12.5px] text-[#6b7585] font-light">
+              <div className="text-[12.5px] text-[#6b7585]">
                 Trusted by clients from <span className="text-[#3e94c7]">60+ countries</span>
               </div>
             </div>
@@ -98,7 +97,7 @@ export function Stats() {
                 <div className="mt-3 text-[13.5px] font-medium text-[#0d1730]">
                   {s.label}
                 </div>
-                <div className="mt-1 text-[11.5px] text-[#6b7585] font-light">{s.sub}</div>
+                <div className="mt-1 text-[11.5px] text-[#6b7585]">{s.sub}</div>
               </motion.div>
             ))}
           </div>

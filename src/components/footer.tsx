@@ -64,9 +64,11 @@ export function Footer() {
         <div className="grid gap-16 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div className="space-y-7">
             <BrandMark size={140} />
-            <p className="max-w-sm text-[14px] text-[#4a5462] leading-[1.7] font-light">
-              A Regulated Canadian Immigration Consultancy helping professionals,
-              entrepreneurs and families turn Canada from a destination into home.
+            <p className="max-w-sm text-[14.5px] text-[#4a5462] leading-[1.7]">
+              Toronto-based Canadian immigration consultancy. We represent
+              professionals, families and entrepreneurs across every Canadian
+              permanent residence, work, study and citizenship pathway under
+              the regulated record of a CICC-licensed RCIC.
             </p>
             <div className="space-y-3 text-[13.5px]">
               <a
@@ -123,7 +125,7 @@ export function Footer() {
                   <li key={l}>
                     <Link
                       href="#"
-                      className="group inline-flex items-center gap-1.5 text-[#6b7585] hover:text-[#0d1730] transition font-light"
+                      className="group inline-flex items-center gap-1.5 text-[#6b7585] hover:text-[#0d1730] transition"
                     >
                       {l}
                       <ArrowUpRight className="h-3 w-3 opacity-0 group-hover:opacity-70 -translate-x-1 group-hover:translate-x-0 transition" />
@@ -137,12 +139,12 @@ export function Footer() {
 
         <div className="mt-20 hairline" />
         <div className="mt-7 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[11.5px] text-[#6b7585]">
-          <p className="font-light">
-            © {new Date().getFullYear()} Chrome Visa Solution Inc. — RCIC #R000000.
+          <p>
+            © {new Date().getFullYear()} Chrome Visa Solutions Inc. — RCIC #R000000.
             All rights reserved.
           </p>
-          <p className="font-mono tracking-[0.18em] uppercase">
-            Crafted in Toronto · Canada
+          <p className="font-mono tracking-[0.18em] uppercase text-[10.5px]">
+            Toronto · Canada
           </p>
         </div>
       </div>

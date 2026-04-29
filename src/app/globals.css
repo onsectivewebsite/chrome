@@ -98,10 +98,11 @@ body {
   background: linear-gradient(180deg, #67b219, #4f8a13);
 }
 
-/* Editorial display refinements */
+/* Editorial display refinements — Fraunces with optical-size feature */
 .font-display {
-  font-feature-settings: "liga", "dlig", "kern";
-  letter-spacing: -0.022em;
+  font-feature-settings: "liga", "dlig", "kern", "ss01";
+  font-variation-settings: "opsz" 144;
+  letter-spacing: -0.018em;
 }
 
 /* Subtle structural grid */

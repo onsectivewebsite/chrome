@@ -96,16 +96,15 @@ export function Services() {
             <span className="eyebrow">
               <span className="rule-gold" /> Practice Areas
             </span>
-            <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.2rem)] font-medium leading-[1.1] tracking-[-0.024em]">
-              <span className="text-gradient">One firm.</span>{" "}
-              <span className="text-gradient-accent italic font-semibold">Every</span>{" "}
-              <span className="text-gradient">pathway to Canada.</span>
+            <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.2rem)] font-medium leading-[1.1] tracking-[-0.018em] text-[#0d1730]">
+              Every Canadian immigration pathway, under one file.
             </h2>
           </div>
-          <p className="text-[15.5px] text-[#4a5462] leading-[1.7] md:max-w-md md:justify-self-end font-light">
-            Whatever brings you to Canada — a career, a university, a family
-            reunion, or a venture — we engineer the strongest possible case
-            for your story. No templates. No shortcuts.
+          <p className="text-[16px] text-[#4a5462] leading-[1.7] md:max-w-md md:justify-self-end">
+            We act for clients across the full range of permanent residence,
+            work, study, family and business pathways. Each file is opened
+            under the regulated record of an RCIC and prepared to IRCC
+            standard from day one.
           </p>
         </motion.div>
 
@@ -137,7 +136,7 @@ export function Services() {
               <div className="mt-1 text-[10.5px] uppercase tracking-[0.2em] text-[#3e94c7]/75 font-mono">
                 {s.tag}
               </div>
-              <p className="mt-4 text-[13.5px] text-[#4a5462] leading-[1.65] flex-1 font-light">
+              <p className="mt-4 text-[13.5px] text-[#4a5462] leading-[1.65] flex-1">
                 {s.desc}
               </p>
               <div className="mt-7 inline-flex items-center gap-1.5 text-[12.5px] text-[#3e94c7]/85 group-hover:text-[#3e94c7] group-hover:gap-2.5 transition-all duration-400 font-mono uppercase tracking-[0.16em]">

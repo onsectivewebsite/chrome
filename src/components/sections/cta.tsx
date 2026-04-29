@@ -25,44 +25,43 @@ export function CTA() {
           <div className="relative grid items-center gap-12 md:grid-cols-[1.25fr_1fr]">
             <div>
               <span className="eyebrow">
-                <span className="rule-gold" /> Free · 30 minutes · No obligation
+                <span className="rule-gold" /> Initial Consultation
               </span>
-              <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.4rem)] font-medium leading-[1.1] tracking-[-0.024em]">
-                <span className="text-gradient">Let&apos;s map your path </span>
-                <span className="text-gradient-accent italic font-semibold">to Canada</span>
-                <span className="text-gradient">.</span>
+              <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.4rem)] font-medium leading-[1.1] tracking-[-0.018em] text-[#0d1730]">
+                Speak with an RCIC about your case.
               </h2>
-              <p className="mt-7 max-w-lg text-[15.5px] text-[#4a5462] leading-[1.7] font-light">
-                Book a complimentary consultation with a Regulated Canadian
-                Immigration Consultant. You&apos;ll leave the call with a clear
-                shortlist of programs, timelines, and next steps — whether you
-                hire us or not.
+              <p className="mt-7 max-w-lg text-[16px] text-[#4a5462] leading-[1.7]">
+                A 30‑minute call with a CICC‑licensed Regulated Canadian
+                Immigration Consultant. You&apos;ll receive a written
+                eligibility analysis, the programs that apply to your
+                profile, realistic timelines and an honest view of risk —
+                whether you retain us or not.
               </p>
               <div className="mt-9 flex flex-wrap items-center gap-3">
                 <Link href="#contact" className="btn-primary">
-                  Book my free assessment
+                  Book a consultation
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link href="#services" className="btn-ghost">
-                  Browse practice areas
+                  Review practice areas
                 </Link>
               </div>
             </div>
 
             <ul className="grid gap-2.5 text-sm">
               {[
-                "Profile review against every eligible program",
-                "Honest timeline, cost and risk breakdown",
-                "CRS & IELTS / CELPIP targets for your case",
-                "No pressure, no bait‑and‑switch packages",
-                "RCIC‑regulated · written engagement terms",
+                "Eligibility analysis against every applicable program",
+                "Realistic timeline, cost and risk assessment",
+                "CRS, IELTS / CELPIP targets specific to your file",
+                "No bundled packages or pressure to retain",
+                "Written engagement terms before any work begins",
               ].map((t) => (
                 <li
                   key={t}
                   className="flex items-start gap-3.5 rounded-2xl border border-[#3e94c7]/10 bg-[#3e94c7]/[0.025] p-4 transition hover:border-[#3e94c7]/[0.22] hover:bg-[#3e94c7]/[0.04]"
                 >
                   <CheckCircle2 className="mt-0.5 h-5 w-5 text-[#3e94c7] shrink-0" strokeWidth={1.5} />
-                  <span className="text-[14px] text-[#0d1730]] font-light leading-[1.55]">{t}</span>
+                  <span className="text-[14px] text-[#0d1730]] leading-[1.55]">{t}</span>
                 </li>
               ))}
             </ul>

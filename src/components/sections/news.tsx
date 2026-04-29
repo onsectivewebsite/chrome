@@ -40,19 +40,18 @@ export function News() {
             <span className="eyebrow">
               <span className="rule-gold" /> Newsroom
             </span>
-            <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.2rem)] font-medium leading-[1.1] tracking-[-0.024em]">
-              <span className="text-gradient">The latest from</span>{" "}
-              <span className="text-gradient-accent italic font-semibold">Canadian immigration</span>
-              <span className="text-gradient">.</span>
+            <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.2rem)] font-medium leading-[1.1] tracking-[-0.018em] text-[#0d1730]">
+              Canadian immigration, in real time.
             </h2>
-            <p className="mt-7 max-w-xl text-[15.5px] text-[#4a5462] leading-[1.7] font-light">
-              IRCC bulletins, Express Entry draws, PNP results, court rulings,
-              processing-time updates and policy briefs — curated weekly from{" "}
+            <p className="mt-7 max-w-xl text-[16px] text-[#4a5462] leading-[1.7]">
+              Express Entry draws, PNP results, IRCC operational bulletins,
+              Federal Court decisions and processing-time updates — summarised
+              from{" "}
               <span className="text-[#0d1730] font-medium">CIC News</span>,{" "}
-              <span className="text-[#0d1730] font-medium">Canada.ca</span> and{" "}
-              <span className="text-[#0d1730] font-medium">provincial channels</span>.{" "}
-              <span className="font-mono text-[12px] tracking-wider text-[#67b219]">
-                {NEWS.length.toLocaleString()}+ stories indexed
+              <span className="text-[#0d1730] font-medium">Canada.ca</span> and
+              provincial channels.{" "}
+              <span className="font-mono text-[12px] tracking-wider text-[#67b219] font-semibold">
+                {NEWS.length.toLocaleString()} stories indexed
               </span>
               .
             </p>
@@ -60,7 +59,7 @@ export function News() {
           <div className="flex md:justify-end">
             <Link href="/news" className="btn-ghost group">
               <Newspaper className="h-4 w-4" strokeWidth={1.8} />
-              Browse the full newsroom
+              Browse the newsroom
               <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
           </div>
@@ -93,7 +92,7 @@ export function News() {
               {featured.title}
             </h3>
 
-            <p className="mt-5 text-[15px] leading-[1.7] text-[#4a5462] font-light">
+            <p className="mt-5 text-[15px] leading-[1.7] text-[#4a5462]">
               {featured.summary}
             </p>
 
@@ -168,7 +167,7 @@ export function News() {
               <h4 className="mt-3 font-display text-[18px] leading-[1.3] tracking-tight text-[#0d1730] group-hover:text-[#2a6e95] transition">
                 {item.title}
               </h4>
-              <p className="mt-3 text-[13px] text-[#4a5462] leading-[1.6] font-light line-clamp-2">
+              <p className="mt-3 text-[13px] text-[#4a5462] leading-[1.6] line-clamp-2">
                 {item.summary}
               </p>
             </Link>

@@ -6,36 +6,36 @@ import { ClipboardCheck, Compass, FileSearch, Send, PartyPopper } from "lucide-r
 const steps = [
   {
     icon: ClipboardCheck,
-    title: "Discovery",
-    desc: "A 30‑minute consult with an RCIC to map your goals, timeline, and the programs you actually qualify for. No fluff.",
+    title: "Consultation",
+    desc: "A 30‑minute call with a CICC‑licensed RCIC to review your profile, identify the programs you qualify for, and outline realistic timelines.",
     time: "Day 1",
     no: "I",
   },
   {
     icon: Compass,
     title: "Strategy",
-    desc: "We engineer a multi‑path roadmap: primary pathway, backups, risk mitigation, and a week‑by‑week plan.",
+    desc: "We prepare a written immigration plan: primary pathway, backup options, eligibility analysis, and a documented schedule.",
     time: "Week 1",
     no: "II",
   },
   {
     icon: FileSearch,
     title: "Documentation",
-    desc: "Evidence, translations, ECAs, police checks, medicals — collected and polished in a secure shared vault.",
+    desc: "Evidence collection — work references, ECAs, language tests, police certificates, medicals — assembled and reviewed in a secure client portal.",
     time: "Weeks 2–6",
     no: "III",
   },
   {
     icon: Send,
     title: "Submission",
-    desc: "We draft, review, and submit — under your authorised RCIC of record, so IRCC corresponds with us, not you.",
+    desc: "We draft, review and file the application as your representative of record. All IRCC correspondence is directed to our office.",
     time: "Filed",
     no: "IV",
   },
   {
     icon: PartyPopper,
     title: "Landing",
-    desc: "From pre‑landing checklists to SIN, health card, and settlement partners — we stay with you after approval.",
+    desc: "Pre‑landing checklist, SIN application, provincial health enrolment, and introductions to settlement agencies in your destination city.",
     time: "Arrival",
     no: "V",
   },
@@ -53,16 +53,15 @@ export function Process() {
           className="mx-auto max-w-3xl text-center"
         >
           <span className="eyebrow">
-            <span className="rule-gold" /> The Method
+            <span className="rule-gold" /> Our Process
           </span>
-          <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.2rem)] font-medium leading-[1.1] tracking-[-0.024em]">
-            <span className="text-gradient">A precision </span>
-            <span className="text-gradient-accent italic font-semibold">five‑act</span>
-            <span className="text-gradient"> system.</span>
+          <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.2rem)] font-medium leading-[1.1] tracking-[-0.018em] text-[#0d1730]">
+            How we work with you, from first call to landing.
           </h2>
-          <p className="mt-7 text-[15.5px] text-[#4a5462] leading-[1.7] font-light max-w-xl mx-auto">
-            Most applications fail not because of who you are, but how the case
-            is built. Our process is the safeguard.
+          <p className="mt-7 text-[16px] text-[#4a5462] leading-[1.7] max-w-xl mx-auto">
+            Most refused applications fail on how the case was built — not on
+            who the applicant was. Our process exists to remove that risk
+            before it reaches the officer.
           </p>
         </motion.div>
 
@@ -99,7 +98,7 @@ export function Process() {
                   <h3 className="mt-2 font-display text-[22px] font-medium tracking-tight text-[#0d1730]">
                     {s.title}
                   </h3>
-                  <p className="mt-3 text-[13.5px] text-[#4a5462] leading-[1.65] font-light max-w-[230px] mx-auto">
+                  <p className="mt-3 text-[13.5px] text-[#4a5462] leading-[1.65] max-w-[230px] mx-auto">
                     {s.desc}
                   </p>
                 </div>
