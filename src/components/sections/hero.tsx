@@ -24,7 +24,7 @@ export function Hero() {
               className="eyebrow"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-[#67b219] shadow-[0_0_10px_2px_rgba(103,178,25,0.55)]" />
-              CICC RCIC <span className="text-[#6b7585] mx-1">·</span> #R000000 <span className="text-[#6b7585] mx-1">·</span> Toronto
+              CICC RCIC <span className="text-[#6b7585] mx-1">·</span> #R000000 <span className="text-[#6b7585] mx-1">·</span> Brampton, ON
             </motion.div>
 
             <motion.h1
@@ -53,10 +53,10 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="mt-9 max-w-xl text-[17px] md:text-[18px] text-[#2a3548] leading-[1.65]"
             >
-              Chrome Visa Solutions is a Toronto‑based immigration firm. We
-              represent professionals, families and entrepreneurs through
-              every Canadian permanent residence, work and study pathway —
-              under the file of a CICC‑licensed RCIC.
+              Chrome Visa Solutions is a Brampton, Ontario‑based immigration
+              firm. We represent professionals, families and entrepreneurs
+              through every Canadian permanent residence, work and study
+              pathway — under the file of a CICC‑licensed RCIC.
             </motion.p>
 
             <motion.div
@@ -65,8 +65,8 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.55 }}
               className="mt-10 flex flex-wrap items-center gap-3"
             >
-              <Link href="#contact" className="btn-primary group">
-                Book a consultation
+              <Link href="/assessment" className="btn-primary group">
+                Start free assessment
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
               </Link>
               <Link href="#process" className="btn-ghost group">

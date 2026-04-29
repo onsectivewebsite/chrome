@@ -41,7 +41,7 @@ export function Contact() {
 
             <div className="mt-10 space-y-3 text-sm">
               <a
-                href="mailto:hello@chromevisa.ca"
+                href="mailto:info@chromevisa.ca"
                 className="flex items-center gap-3.5 rounded-2xl border border-[#3e94c7]/10 bg-[#3e94c7]/[0.025] p-4 hover:border-[#3e94c7]/25 hover:bg-[#3e94c7]/[0.045] transition group"
               >
                 <span className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-[#67b219] to-[#4f8a13] border border-[#4f8a13]/30 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.3)]">
@@ -51,11 +51,11 @@ export function Contact() {
                   <div className="text-[10px] uppercase tracking-[0.22em] text-[#6b7585] font-mono">
                     Email
                   </div>
-                  <div className="text-[#0d1730] mt-0.5">hello@chromevisa.ca</div>
+                  <div className="text-[#0d1730] mt-0.5">info@chromevisa.ca</div>
                 </div>
               </a>
               <a
-                href="tel:+14165550199"
+                href="tel:+16475374581"
                 className="flex items-center gap-3.5 rounded-2xl border border-[#3e94c7]/10 bg-[#3e94c7]/[0.025] p-4 hover:border-[#3e94c7]/25 hover:bg-[#3e94c7]/[0.045] transition"
               >
                 <span className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-[#3e94c7] to-[#2a6e95] border border-[#2a6e95]/30 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.3)]">
@@ -65,7 +65,7 @@ export function Contact() {
                   <div className="text-[10px] uppercase tracking-[0.22em] text-[#6b7585] font-mono">
                     Direct line
                   </div>
-                  <div className="text-[#0d1730] mt-0.5">+1 (416) 555‑0199</div>
+                  <div className="text-[#0d1730] mt-0.5">+1 (647) 537‑4581</div>
                 </div>
               </a>
               <div className="flex items-center gap-3.5 rounded-2xl border border-[#3e94c7]/10 bg-[#3e94c7]/[0.025] p-4">
@@ -77,7 +77,7 @@ export function Contact() {
                     Office
                   </div>
                   <div className="text-[#0d1730] mt-0.5">
-                    181 Bay Street, Suite 1800 · Toronto, ON M5J 2T3
+                    8450 Creditview Rd, Brampton, Ontario, L6Y 0G4
                   </div>
                 </div>
               </div>
@@ -110,7 +110,7 @@ export function Contact() {
               <div className="grid gap-4 md:grid-cols-2">
                 <Field label="Full name" name="name" placeholder="Jane Kaur" required />
                 <Field label="Email" name="email" type="email" placeholder="you@email.com" required />
-                <Field label="Phone (optional)" name="phone" placeholder="+1 416 555 0199" />
+                <Field label="Phone (optional)" name="phone" placeholder="+1 647 537 4581" />
                 <Field label="Current country" name="country" placeholder="India / UAE / …" />
               </div>
 

@@ -65,35 +65,35 @@ export function Footer() {
           <div className="space-y-7">
             <BrandMark size={140} />
             <p className="max-w-sm text-[14.5px] text-[#4a5462] leading-[1.7]">
-              Toronto-based Canadian immigration consultancy. We represent
+              Brampton-based Canadian immigration consultancy. We represent
               professionals, families and entrepreneurs across every Canadian
               permanent residence, work, study and citizenship pathway under
               the regulated record of a CICC-licensed RCIC.
             </p>
             <div className="space-y-3 text-[13.5px]">
               <a
-                href="mailto:hello@chromevisa.ca"
+                href="mailto:info@chromevisa.ca"
                 className="flex items-center gap-3 text-[#2a3548] hover:text-[#0d1730] transition group"
               >
                 <span className="grid h-9 w-9 place-items-center rounded-lg bg-[#3e94c7]/5 border border-[#3e94c7]/[0.12] group-hover:border-[#3e94c7]/30 transition">
                   <Mail className="h-4 w-4" strokeWidth={1.6} />
                 </span>
-                hello@chromevisa.ca
+                info@chromevisa.ca
               </a>
               <a
-                href="tel:+14165550199"
+                href="tel:+16475374581"
                 className="flex items-center gap-3 text-[#2a3548] hover:text-[#0d1730] transition group"
               >
                 <span className="grid h-9 w-9 place-items-center rounded-lg bg-[#3e94c7]/5 border border-[#3e94c7]/[0.12] group-hover:border-[#3e94c7]/30 transition">
                   <Phone className="h-4 w-4" strokeWidth={1.6} />
                 </span>
-                +1 (416) 555‑0199
+                +1 (647) 537‑4581
               </a>
               <div className="flex items-center gap-3 text-[#2a3548]">
                 <span className="grid h-9 w-9 place-items-center rounded-lg bg-[#3e94c7]/5 border border-[#3e94c7]/[0.12]">
                   <MapPin className="h-4 w-4" strokeWidth={1.6} />
                 </span>
-                181 Bay Street, Toronto ON M5J 2T3
+                8450 Creditview Rd, Brampton, ON L6Y 0G4
               </div>
             </div>
             <div className="flex items-center gap-2">
@@ -144,7 +144,7 @@ export function Footer() {
             All rights reserved.
           </p>
           <p className="font-mono tracking-[0.18em] uppercase text-[10.5px]">
-            Toronto · Canada
+            Brampton · Ontario · Canada
           </p>
         </div>
       </div>

@@ -38,8 +38,8 @@ export function CTA() {
                 whether you retain us or not.
               </p>
               <div className="mt-9 flex flex-wrap items-center gap-3">
-                <Link href="#contact" className="btn-primary">
-                  Book a consultation
+                <Link href="/assessment" className="btn-primary">
+                  Start free assessment
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link href="#services" className="btn-ghost">

@@ -180,10 +180,10 @@ export default async function NewsArticle({
               RCIC for application-specific guidance.
             </p>
             <Link
-              href="/#contact"
+              href="/assessment"
               className="mt-5 btn-primary text-[13px] py-2.5"
             >
-              Speak to an RCIC
+              Start a free assessment
               <ArrowUpRight className="h-3.5 w-3.5" />
             </Link>
           </div>

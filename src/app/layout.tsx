@@ -28,7 +28,7 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Chrome Visa Solutions — Regulated Canadian Immigration Consultancy",
   description:
-    "Toronto-based Canadian immigration consultancy. Permanent residence, work permits, study permits, family sponsorship and citizenship — represented by a CICC-licensed RCIC.",
+    "Brampton, Ontario-based Canadian immigration consultancy. Permanent residence, work permits, study permits, family sponsorship and citizenship — represented by a CICC-licensed RCIC.",
   keywords: [
     "Canadian immigration",
     "Express Entry",

@@ -32,6 +32,7 @@ const nav = [
   { label: "About", href: "/#about" },
   { label: "Stories", href: "/#testimonials" },
   { label: "Newsroom", href: "/news" },
+  { label: "Assessment", href: "/assessment" },
   { label: "Contact", href: "/#contact" },
 ];
 
@@ -68,18 +69,18 @@ export function Navbar() {
             <div className="mx-auto max-w-[1400px] px-6 py-2 flex items-center justify-between text-[11.5px] font-mono">
               <div className="flex items-center gap-5 text-[#4a5462]">
                 <a
-                  href="tel:+14165550199"
+                  href="tel:+16475374581"
                   className="hidden sm:inline-flex items-center gap-1.5 hover:text-[#0d1730] transition"
                 >
                   <Phone className="h-3 w-3 text-[#67b219]" strokeWidth={2.2} />
-                  <span className="tracking-wider">+1 (416) 555‑0199</span>
+                  <span className="tracking-wider">+1 (647) 537‑4581</span>
                 </a>
                 <a
-                  href="mailto:hello@chromevisa.ca"
+                  href="mailto:info@chromevisa.ca"
                   className="hidden md:inline-flex items-center gap-1.5 hover:text-[#0d1730] transition"
                 >
                   <Mail className="h-3 w-3 text-[#3e94c7]" strokeWidth={2.2} />
-                  <span className="tracking-wider">hello@chromevisa.ca</span>
+                  <span className="tracking-wider">info@chromevisa.ca</span>
                 </a>
                 <span className="hidden lg:inline-flex items-center gap-1.5">
                   <Clock className="h-3 w-3 text-[#6b7585]" strokeWidth={2.2} />
@@ -150,16 +151,16 @@ export function Navbar() {
 
             <div className="flex items-center gap-3">
               <Link
-                href="/#contact"
+                href="/assessment"
                 className="hidden md:inline-flex items-center gap-1.5 text-[13px] font-medium text-[#0d1730] hover:text-[#2a6e95] transition"
               >
                 Free assessment
               </Link>
               <Link
-                href="/#contact"
+                href="/assessment"
                 className="hidden sm:inline-flex btn-primary text-[13px] py-2.5 px-5"
               >
-                Book a Consult
+                Start Assessment
                 <ArrowUpRight className="h-3.5 w-3.5" />
               </Link>
               <button
@@ -201,25 +202,25 @@ export function Navbar() {
               </div>
               <div className="mt-5 pt-5 border-t border-[#0d1730]/[0.08] flex flex-col gap-3">
                 <a
-                  href="tel:+14165550199"
+                  href="tel:+16475374581"
                   className="flex items-center gap-3 text-[13px] text-[#4a5462]"
                 >
                   <Phone className="h-3.5 w-3.5 text-[#67b219]" strokeWidth={2.2} />
-                  +1 (416) 555‑0199
+                  +1 (647) 537‑4581
                 </a>
                 <a
-                  href="mailto:hello@chromevisa.ca"
+                  href="mailto:info@chromevisa.ca"
                   className="flex items-center gap-3 text-[13px] text-[#4a5462]"
                 >
                   <Mail className="h-3.5 w-3.5 text-[#3e94c7]" strokeWidth={2.2} />
-                  hello@chromevisa.ca
+                  info@chromevisa.ca
                 </a>
                 <Link
-                  href="/#contact"
+                  href="/assessment"
                   onClick={() => setOpen(false)}
                   className="btn-primary mt-2 justify-center"
                 >
-                  Book Free Consult
+                  Start Free Assessment
                   <ArrowUpRight className="h-4 w-4" />
                 </Link>
               </div>
