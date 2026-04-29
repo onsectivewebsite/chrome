@@ -30,8 +30,8 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="eyebrow"
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-[#d4b078] shadow-[0_0_12px_2px_rgba(212,176,120,0.7)]" />
-              RCIC‑Led <span className="text-[#8a8395] mx-1">·</span> IRCC Compliant <span className="text-[#8a8395] mx-1">·</span> Est. 2013
+              <span className="h-1.5 w-1.5 rounded-full bg-[#3e94c7] shadow-[0_0_12px_2px_rgba(62,148,199,0.7)]" />
+              RCIC‑Led <span className="text-[#7a8590] mx-1">·</span> IRCC Compliant <span className="text-[#7a8590] mx-1">·</span> Est. 2013
             </motion.div>
 
             <motion.h1
@@ -48,7 +48,7 @@ export function Hero() {
                   animate={{ scaleX: 1 }}
                   transition={{ duration: 1.3, delay: 1.0, ease: [0.22, 1, 0.36, 1] }}
                   style={{ originX: 0 }}
-                  className="absolute -bottom-1.5 left-0 right-0 h-[2px] rounded-full bg-gradient-to-r from-[#ead7af] via-[#d4b078] to-transparent"
+                  className="absolute -bottom-1.5 left-0 right-0 h-[2px] rounded-full bg-gradient-to-r from-[#7fb6d8] via-[#3e94c7] to-transparent"
                 />
               </span>
               <br className="hidden md:block" />
@@ -60,7 +60,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="mt-9 max-w-xl text-[16.5px] md:text-[17.5px] text-[#e9e4d8]/65 leading-[1.65] font-light"
+              className="mt-9 max-w-xl text-[16.5px] md:text-[17.5px] text-[#e8edf2]/65 leading-[1.65] font-light"
             >
               A Toronto‑based immigration consultancy for the few who don&apos;t leave
               their future to chance. Regulated counsel, an engineered process,
@@ -87,15 +87,15 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.75 }}
-              className="mt-12 flex flex-wrap items-center gap-7 text-[13px] text-[#e9e4d8]/55"
+              className="mt-12 flex flex-wrap items-center gap-7 text-[13px] text-[#e8edf2]/55"
             >
               <div className="flex items-center gap-2.5">
-                <ShieldCheck className="h-4 w-4 text-[#d4b078]" />
+                <ShieldCheck className="h-4 w-4 text-[#3e94c7]" />
                 <span>CICC‑Regulated Consultants</span>
               </div>
-              <div className="hidden sm:block h-3 w-px bg-[#ead7af]/15" />
+              <div className="hidden sm:block h-3 w-px bg-[#7fb6d8]/15" />
               <div className="flex items-center gap-2.5">
-                <Award className="h-4 w-4 text-[#d4b078]" />
+                <Award className="h-4 w-4 text-[#3e94c7]" />
                 <span>97% First‑Time Approval</span>
               </div>
             </motion.div>
@@ -104,7 +104,7 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.2, delay: 1.0 }}
-              className="mt-14 grid max-w-xl grid-cols-3 gap-8 border-t border-[#ead7af]/10 pt-8"
+              className="mt-14 grid max-w-xl grid-cols-3 gap-8 border-t border-[#7fb6d8]/10 pt-8"
             >
               {[
                 { k: "4,800+", v: "Lives transformed" },
@@ -113,10 +113,10 @@ export function Hero() {
               ].map((s, i) => (
                 <div key={s.v} className="relative">
                   {i > 0 && (
-                    <span className="absolute -left-4 top-1.5 bottom-1.5 w-px bg-[#ead7af]/10" />
+                    <span className="absolute -left-4 top-1.5 bottom-1.5 w-px bg-[#7fb6d8]/10" />
                   )}
-                  <div className="font-display text-[28px] md:text-[34px] tracking-tight text-[#f6f0e1]">{s.k}</div>
-                  <div className="mt-1.5 text-[10.5px] uppercase tracking-[0.18em] text-[#8a8395]">
+                  <div className="font-display text-[28px] md:text-[34px] tracking-tight text-[#ffffff]">{s.k}</div>
+                  <div className="mt-1.5 text-[10.5px] uppercase tracking-[0.18em] text-[#7a8590]">
                     {s.v}
                   </div>
                 </div>
@@ -135,58 +135,58 @@ export function Hero() {
             >
               <div className="glass-strong relative overflow-hidden rounded-[28px] p-7">
                 {/* Inner gold hairline */}
-                <div className="pointer-events-none absolute inset-3 rounded-[22px] border border-[#ead7af]/8" />
+                <div className="pointer-events-none absolute inset-3 rounded-[22px] border border-[#7fb6d8]/8" />
 
                 <div className="relative flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
                     <span className="h-2 w-2 rounded-full bg-emerald-400 pulse-glow" />
-                    <span className="text-[10.5px] uppercase tracking-[0.22em] text-[#e9e4d8]/65 font-mono">
+                    <span className="text-[10.5px] uppercase tracking-[0.22em] text-[#e8edf2]/65 font-mono">
                       Live · Express Entry
                     </span>
                   </div>
-                  <span className="text-[10.5px] font-mono text-[#d4b078]/85">Draw № 329</span>
+                  <span className="text-[10.5px] font-mono text-[#3e94c7]/85">Draw № 329</span>
                 </div>
 
                 <div className="relative mt-6">
-                  <div className="text-[10.5px] uppercase tracking-[0.22em] text-[#8a8395] font-mono">Latest cut‑off</div>
+                  <div className="text-[10.5px] uppercase tracking-[0.22em] text-[#7a8590] font-mono">Latest cut‑off</div>
                   <div className="mt-2 flex items-baseline gap-3">
-                    <div className="font-display text-[68px] leading-none tracking-[-0.03em] text-[#f6f0e1]">
+                    <div className="font-display text-[68px] leading-none tracking-[-0.03em] text-[#ffffff]">
                       497
                     </div>
                     <div className="flex flex-col text-[11px]">
-                      <span className="text-[#d4b078]">▼ 3 pts</span>
-                      <span className="text-[#8a8395]">vs. Apr 12</span>
+                      <span className="text-[#3e94c7]">▼ 3 pts</span>
+                      <span className="text-[#7a8590]">vs. Apr 12</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="relative mt-6 grid grid-cols-2 gap-3 text-sm">
-                  <div className="rounded-2xl border border-[#ead7af]/10 bg-[#ead7af]/[0.025] p-3.5">
-                    <div className="text-[10px] uppercase tracking-[0.18em] text-[#8a8395] font-mono">
+                  <div className="rounded-2xl border border-[#7fb6d8]/10 bg-[#7fb6d8]/[0.025] p-3.5">
+                    <div className="text-[10px] uppercase tracking-[0.18em] text-[#7a8590] font-mono">
                       ITAs issued
                     </div>
-                    <div className="mt-1.5 text-[#f6f0e1] font-display text-lg">3,750</div>
+                    <div className="mt-1.5 text-[#ffffff] font-display text-lg">3,750</div>
                   </div>
-                  <div className="rounded-2xl border border-[#ead7af]/10 bg-[#ead7af]/[0.025] p-3.5">
-                    <div className="text-[10px] uppercase tracking-[0.18em] text-[#8a8395] font-mono">
+                  <div className="rounded-2xl border border-[#7fb6d8]/10 bg-[#7fb6d8]/[0.025] p-3.5">
+                    <div className="text-[10px] uppercase tracking-[0.18em] text-[#7a8590] font-mono">
                       Processing
                     </div>
-                    <div className="mt-1.5 text-[#f6f0e1] font-display text-lg">~5 mo.</div>
+                    <div className="mt-1.5 text-[#ffffff] font-display text-lg">~5 mo.</div>
                   </div>
                 </div>
 
                 <div className="relative mt-6 hairline" />
 
-                <div className="relative mt-5 flex items-center justify-between text-[12px] text-[#e9e4d8]/65">
+                <div className="relative mt-5 flex items-center justify-between text-[12px] text-[#e8edf2]/65">
                   <span>Your estimated CRS</span>
-                  <span className="font-mono text-[#f6f0e1]">512</span>
+                  <span className="font-mono text-[#ffffff]">512</span>
                 </div>
-                <div className="relative mt-2.5 h-1.5 overflow-hidden rounded-full bg-[#ead7af]/8">
+                <div className="relative mt-2.5 h-1.5 overflow-hidden rounded-full bg-[#7fb6d8]/8">
                   <motion.div
                     initial={{ width: 0 }}
                     animate={{ width: "78%" }}
                     transition={{ duration: 1.6, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
-                    className="h-full rounded-full bg-gradient-to-r from-[#ead7af] via-[#d4b078] to-[#b3122a]"
+                    className="h-full rounded-full bg-gradient-to-r from-[#7fb6d8] via-[#3e94c7] to-[#67b219]"
                   />
                 </div>
 
@@ -200,15 +200,15 @@ export function Hero() {
               <motion.div
                 animate={{ y: [0, -7, 0] }}
                 transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -left-12 top-12 hidden md:flex items-center gap-2.5 rounded-full glass px-3.5 py-2 text-[11px] text-[#e9e4d8]/85"
+                className="absolute -left-12 top-12 hidden md:flex items-center gap-2.5 rounded-full glass px-3.5 py-2 text-[11px] text-[#e8edf2]/85"
               >
-                <span className="h-1.5 w-1.5 rounded-full bg-[#d4b078]" />
+                <span className="h-1.5 w-1.5 rounded-full bg-[#3e94c7]" />
                 <span className="font-mono uppercase tracking-[0.16em]">PR · Priya S.</span>
               </motion.div>
               <motion.div
                 animate={{ y: [0, 7, 0] }}
                 transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
-                className="absolute -right-4 bottom-6 hidden md:flex items-center gap-2.5 rounded-full glass px-3.5 py-2 text-[11px] text-[#e9e4d8]/85"
+                className="absolute -right-4 bottom-6 hidden md:flex items-center gap-2.5 rounded-full glass px-3.5 py-2 text-[11px] text-[#e8edf2]/85"
               >
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
                 <span className="font-mono uppercase tracking-[0.16em]">Work · Lucas M.</span>
@@ -219,12 +219,12 @@ export function Hero() {
       </div>
 
       {/* Refined marquee */}
-      <div className="relative mt-24 overflow-hidden border-y border-[#ead7af]/8 bg-black/20 py-7">
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#07070b] to-transparent z-10" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#07070b] to-transparent z-10" />
+      <div className="relative mt-24 overflow-hidden border-y border-[#7fb6d8]/8 bg-black/20 py-7">
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#06080c] to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#06080c] to-transparent z-10" />
         <div className="flex animate-marquee whitespace-nowrap">
           {Array.from({ length: 2 }).map((_, r) => (
-            <div key={r} className="flex shrink-0 items-center gap-16 px-8 text-[12px] text-[#e9e4d8]/45">
+            <div key={r} className="flex shrink-0 items-center gap-16 px-8 text-[12px] text-[#e8edf2]/45">
               {[
                 "Express Entry",
                 "PNP · Ontario · BC · Alberta",
@@ -238,7 +238,7 @@ export function Hero() {
                 "Visitor Visa",
               ].map((t) => (
                 <span key={t} className="flex items-center gap-3.5">
-                  <span className="h-[3px] w-[3px] rounded-full bg-[#d4b078]/70" />
+                  <span className="h-[3px] w-[3px] rounded-full bg-[#3e94c7]/70" />
                   <span className="font-mono uppercase tracking-[0.24em]">{t}</span>
                 </span>
               ))}

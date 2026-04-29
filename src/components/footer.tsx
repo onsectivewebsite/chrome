@@ -57,38 +57,38 @@ const cols = [
 
 export function Footer() {
   return (
-    <footer className="relative mt-32 border-t border-[#ead7af]/8">
+    <footer className="relative mt-32 border-t border-[#7fb6d8]/8">
       <div className="absolute inset-x-0 -top-px hairline" />
 
       <div className="mx-auto max-w-7xl px-6 pt-24 pb-12">
         <div className="grid gap-16 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div className="space-y-7">
             <BrandMark size={42} />
-            <p className="max-w-sm text-[14px] text-[#e9e4d8]/60 leading-[1.7] font-light">
+            <p className="max-w-sm text-[14px] text-[#e8edf2]/60 leading-[1.7] font-light">
               A Regulated Canadian Immigration Consultancy helping professionals,
               entrepreneurs and families turn Canada from a destination into home.
             </p>
             <div className="space-y-3 text-[13.5px]">
               <a
                 href="mailto:hello@chromevisa.ca"
-                className="flex items-center gap-3 text-[#e9e4d8]/75 hover:text-[#fff8e9] transition group"
+                className="flex items-center gap-3 text-[#e8edf2]/75 hover:text-[#ffffff] transition group"
               >
-                <span className="grid h-9 w-9 place-items-center rounded-lg bg-[#ead7af]/5 border border-[#ead7af]/12 group-hover:border-[#ead7af]/30 transition">
+                <span className="grid h-9 w-9 place-items-center rounded-lg bg-[#7fb6d8]/5 border border-[#7fb6d8]/12 group-hover:border-[#7fb6d8]/30 transition">
                   <Mail className="h-4 w-4" strokeWidth={1.6} />
                 </span>
                 hello@chromevisa.ca
               </a>
               <a
                 href="tel:+14165550199"
-                className="flex items-center gap-3 text-[#e9e4d8]/75 hover:text-[#fff8e9] transition group"
+                className="flex items-center gap-3 text-[#e8edf2]/75 hover:text-[#ffffff] transition group"
               >
-                <span className="grid h-9 w-9 place-items-center rounded-lg bg-[#ead7af]/5 border border-[#ead7af]/12 group-hover:border-[#ead7af]/30 transition">
+                <span className="grid h-9 w-9 place-items-center rounded-lg bg-[#7fb6d8]/5 border border-[#7fb6d8]/12 group-hover:border-[#7fb6d8]/30 transition">
                   <Phone className="h-4 w-4" strokeWidth={1.6} />
                 </span>
                 +1 (416) 555‑0199
               </a>
-              <div className="flex items-center gap-3 text-[#e9e4d8]/75">
-                <span className="grid h-9 w-9 place-items-center rounded-lg bg-[#ead7af]/5 border border-[#ead7af]/12">
+              <div className="flex items-center gap-3 text-[#e8edf2]/75">
+                <span className="grid h-9 w-9 place-items-center rounded-lg bg-[#7fb6d8]/5 border border-[#7fb6d8]/12">
                   <MapPin className="h-4 w-4" strokeWidth={1.6} />
                 </span>
                 181 Bay Street, Toronto ON M5J 2T3
@@ -105,7 +105,7 @@ export function Footer() {
                   key={label}
                   href="#"
                   aria-label={label}
-                  className="grid h-10 w-10 place-items-center rounded-xl border border-[#ead7af]/12 bg-[#ead7af]/[0.025] text-[#e9e4d8]/65 hover:text-[#ead7af] hover:border-[#ead7af]/35 hover:bg-[#ead7af]/[0.06] transition"
+                  className="grid h-10 w-10 place-items-center rounded-xl border border-[#7fb6d8]/12 bg-[#7fb6d8]/[0.025] text-[#e8edf2]/65 hover:text-[#7fb6d8] hover:border-[#7fb6d8]/35 hover:bg-[#7fb6d8]/[0.06] transition"
                 >
                   <SocialIcon name={name} />
                 </a>
@@ -115,7 +115,7 @@ export function Footer() {
 
           {cols.map((col) => (
             <div key={col.title}>
-              <h4 className="text-[10px] font-medium tracking-[0.24em] uppercase text-[#d4b078] font-mono">
+              <h4 className="text-[10px] font-medium tracking-[0.24em] uppercase text-[#3e94c7] font-mono">
                 {col.title}
               </h4>
               <ul className="mt-6 space-y-3.5 text-[13.5px]">
@@ -123,7 +123,7 @@ export function Footer() {
                   <li key={l}>
                     <Link
                       href="#"
-                      className="group inline-flex items-center gap-1.5 text-[#e9e4d8]/55 hover:text-[#fff8e9] transition font-light"
+                      className="group inline-flex items-center gap-1.5 text-[#e8edf2]/55 hover:text-[#ffffff] transition font-light"
                     >
                       {l}
                       <ArrowUpRight className="h-3 w-3 opacity-0 group-hover:opacity-70 -translate-x-1 group-hover:translate-x-0 transition" />
@@ -136,7 +136,7 @@ export function Footer() {
         </div>
 
         <div className="mt-20 hairline" />
-        <div className="mt-7 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[11.5px] text-[#8a8395]">
+        <div className="mt-7 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[11.5px] text-[#7a8590]">
           <p className="font-light">
             © {new Date().getFullYear()} Chrome Visa Solution Inc. — RCIC #R000000.
             All rights reserved.

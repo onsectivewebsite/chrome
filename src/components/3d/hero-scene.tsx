@@ -75,13 +75,13 @@ function FloatingMapleLeaf() {
     <Float speed={1.4} rotationIntensity={0.3} floatIntensity={0.8}>
       <mesh ref={ref} geometry={geometry} scale={1.55} castShadow receiveShadow>
         <meshPhysicalMaterial
-          color="#7a0d1c"
+          color="#3a6810"
           metalness={0.55}
           roughness={0.22}
           clearcoat={1}
           clearcoatRoughness={0.12}
           reflectivity={0.85}
-          emissive="#1a0408"
+          emissive="#264a08"
           emissiveIntensity={0.28}
         />
       </mesh>
@@ -123,7 +123,7 @@ function OrbitingGlobe() {
       <mesh>
         <sphereGeometry args={[0.98, 64, 64]} />
         <meshPhysicalMaterial
-          color="#0a0a14"
+          color="#0a0d12"
           metalness={0.35}
           roughness={0.4}
           transmission={0.18}
@@ -135,12 +135,12 @@ function OrbitingGlobe() {
       </mesh>
       <mesh>
         <sphereGeometry args={[1.001, 48, 48]} />
-        <meshBasicMaterial color="#d4b078" wireframe transparent opacity={0.10} />
+        <meshBasicMaterial color="#3e94c7" wireframe transparent opacity={0.10} />
       </mesh>
       <Points positions={dots} stride={3}>
         <PointMaterial
           transparent
-          color="#ead7af"
+          color="#7fb6d8"
           size={0.018}
           sizeAttenuation
           depthWrite={false}
@@ -148,11 +148,11 @@ function OrbitingGlobe() {
       </Points>
       <mesh rotation={[Math.PI / 2, 0, 0]}>
         <torusGeometry args={[1.28, 0.008, 16, 120]} />
-        <meshBasicMaterial color="#d4b078" transparent opacity={0.55} />
+        <meshBasicMaterial color="#3e94c7" transparent opacity={0.55} />
       </mesh>
       <mesh rotation={[Math.PI / 2, Math.PI / 3.5, 0]}>
         <torusGeometry args={[1.48, 0.005, 16, 120]} />
-        <meshBasicMaterial color="#ead7af" transparent opacity={0.35} />
+        <meshBasicMaterial color="#7fb6d8" transparent opacity={0.35} />
       </mesh>
     </group>
   );
@@ -170,12 +170,12 @@ function Blob() {
     <mesh ref={ref} position={[-2.9, 1.2, -2]} scale={1}>
       <icosahedronGeometry args={[0.9, 6]} />
       <MeshDistortMaterial
-        color="#1f0a14"
+        color="#0d1d12"
         distort={0.42}
         speed={1.4}
         roughness={0.25}
         metalness={0.7}
-        emissive="#3a0610"
+        emissive="#1a330a"
         emissiveIntensity={0.5}
       />
     </mesh>
@@ -192,9 +192,9 @@ export function HeroScene() {
     >
       <color attach="background" args={["#00000000"]} />
       <ambientLight intensity={0.32} />
-      <directionalLight position={[4, 6, 4]} intensity={1.3} color="#fff8e9" />
-      <directionalLight position={[-4, -2, -3]} intensity={0.6} color="#d4b078" />
-      <pointLight position={[0, 0, 2]} intensity={1.0} color="#ead7af" />
+      <directionalLight position={[4, 6, 4]} intensity={1.3} color="#ffffff" />
+      <directionalLight position={[-4, -2, -3]} intensity={0.6} color="#3e94c7" />
+      <pointLight position={[0, 0, 2]} intensity={1.0} color="#7fb6d8" />
 
       <Suspense fallback={null}>
         <FloatingMapleLeaf />
@@ -207,7 +207,7 @@ export function HeroScene() {
           scale={[8, 5, 4]}
           speed={0.3}
           opacity={0.7}
-          color="#ead7af"
+          color="#7fb6d8"
         />
         <Stars
           radius={40}

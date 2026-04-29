@@ -60,7 +60,7 @@ export function Process() {
             <span className="text-gradient-accent italic font-semibold">five‑act</span>
             <span className="text-gradient"> system.</span>
           </h2>
-          <p className="mt-7 text-[15.5px] text-[#e9e4d8]/60 leading-[1.7] font-light max-w-xl mx-auto">
+          <p className="mt-7 text-[15.5px] text-[#e8edf2]/60 leading-[1.7] font-light max-w-xl mx-auto">
             Most applications fail not because of who you are, but how the case
             is built. Our process is the safeguard.
           </p>
@@ -69,7 +69,7 @@ export function Process() {
         <div className="relative mt-24">
           {/* Timeline rail with gold tint */}
           <div className="pointer-events-none absolute left-0 right-0 top-9 hidden lg:block">
-            <div className="mx-auto h-px w-[88%] bg-gradient-to-r from-transparent via-[#d4b078]/45 to-transparent" />
+            <div className="mx-auto h-px w-[88%] bg-gradient-to-r from-transparent via-[#3e94c7]/45 to-transparent" />
           </div>
 
           <ol className="grid gap-10 lg:grid-cols-5 lg:gap-6">
@@ -83,23 +83,23 @@ export function Process() {
                 className="relative"
               >
                 <div className="relative grid h-[72px] w-[72px] mx-auto place-items-center">
-                  <span className="absolute inset-0 rounded-full bg-gradient-to-br from-[#d4b078] to-[#6b0a18] opacity-15 blur-xl" />
-                  <span className="absolute inset-0 rounded-full border border-[#ead7af]/18 bg-gradient-to-br from-[#ead7af]/10 to-[#ead7af]/[0.02]" />
+                  <span className="absolute inset-0 rounded-full bg-gradient-to-br from-[#3e94c7] to-[#264a08] opacity-15 blur-xl" />
+                  <span className="absolute inset-0 rounded-full border border-[#7fb6d8]/18 bg-gradient-to-br from-[#7fb6d8]/10 to-[#7fb6d8]/[0.02]" />
                   {/* Inner gold ring */}
-                  <span className="absolute inset-2 rounded-full border border-[#ead7af]/8" />
-                  <s.icon className="relative h-6 w-6 text-[#ead7af]" strokeWidth={1.5} />
-                  <span className="absolute -top-2 -right-2 grid h-7 w-7 place-items-center rounded-full bg-gradient-to-br from-[#7a0d1c] to-[#3a0610] border border-[#ead7af]/25 text-[10.5px] font-mono text-[#ead7af] shadow-[0_8px_22px_-6px_rgba(179,18,42,0.7)]">
+                  <span className="absolute inset-2 rounded-full border border-[#7fb6d8]/8" />
+                  <s.icon className="relative h-6 w-6 text-[#7fb6d8]" strokeWidth={1.5} />
+                  <span className="absolute -top-2 -right-2 grid h-7 w-7 place-items-center rounded-full bg-gradient-to-br from-[#3a6810] to-[#1a330a] border border-[#7fb6d8]/25 text-[10.5px] font-mono text-[#7fb6d8] shadow-[0_8px_22px_-6px_rgba(103,178,25,0.7)]">
                     {s.no}
                   </span>
                 </div>
                 <div className="mt-7 text-center">
-                  <div className="font-mono text-[10px] uppercase tracking-[0.24em] text-[#d4b078]/75">
+                  <div className="font-mono text-[10px] uppercase tracking-[0.24em] text-[#3e94c7]/75">
                     {s.time}
                   </div>
-                  <h3 className="mt-2 font-display text-[22px] font-medium tracking-tight text-[#f6f0e1]">
+                  <h3 className="mt-2 font-display text-[22px] font-medium tracking-tight text-[#ffffff]">
                     {s.title}
                   </h3>
-                  <p className="mt-3 text-[13.5px] text-[#e9e4d8]/60 leading-[1.65] font-light max-w-[230px] mx-auto">
+                  <p className="mt-3 text-[13.5px] text-[#e8edf2]/60 leading-[1.65] font-light max-w-[230px] mx-auto">
                     {s.desc}
                   </p>
                 </div>

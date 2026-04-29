@@ -18,11 +18,11 @@ export function BrandMark({
         style={{ width: size, height: size }}
       >
         {/* Outer wine bezel */}
-        <span className="absolute inset-0 rounded-[12px] bg-gradient-to-br from-[#c41a32] via-[#7a0d1c] to-[#3a0610] shadow-[0_8px_28px_-10px_rgba(179,18,42,0.65)]" />
+        <span className="absolute inset-0 rounded-[12px] bg-gradient-to-br from-[#67b219] via-[#3a6810] to-[#1a330a] shadow-[0_8px_28px_-10px_rgba(103,178,25,0.65)]" />
         {/* Gold hairline */}
-        <span className="absolute inset-[1px] rounded-[11px] bg-gradient-to-b from-[#ead7af]/35 to-transparent" />
+        <span className="absolute inset-[1px] rounded-[11px] bg-gradient-to-b from-[#7fb6d8]/35 to-transparent" />
         {/* Ink core */}
-        <span className="absolute inset-[2px] rounded-[10px] bg-[#0a0a10]" />
+        <span className="absolute inset-[2px] rounded-[10px] bg-[#0a0d12]" />
         {/* Monogram */}
         <svg
           viewBox="0 0 32 32"
@@ -33,9 +33,9 @@ export function BrandMark({
         >
           <defs>
             <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stopColor="#ead7af" />
-              <stop offset="0.55" stopColor="#d4b078" />
-              <stop offset="1" stopColor="#b08144" />
+              <stop offset="0" stopColor="#7fb6d8" />
+              <stop offset="0.55" stopColor="#3e94c7" />
+              <stop offset="1" stopColor="#2a6e95" />
             </linearGradient>
           </defs>
           <path
@@ -46,10 +46,10 @@ export function BrandMark({
       </span>
       {withWord && (
         <span className="leading-tight">
-          <span className="block font-display text-[18px] font-medium tracking-tight text-[#f6f0e1]">
-            Chrome <span className="italic text-[#ead7af]">Visa</span>
+          <span className="block font-display text-[18px] font-medium tracking-tight text-[#ffffff]">
+            Chrome <span className="italic text-[#7fb6d8]">Visa</span>
           </span>
-          <span className="block font-mono text-[9.5px] uppercase tracking-[0.32em] text-[#8a8395]">
+          <span className="block font-mono text-[9.5px] uppercase tracking-[0.32em] text-[#7a8590]">
             Solution · Est. 2013
           </span>
         </span>

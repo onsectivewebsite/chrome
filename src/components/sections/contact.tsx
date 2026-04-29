@@ -35,7 +35,7 @@ export function Contact() {
               <span className="text-gradient-accent italic font-semibold">story</span>
               <span className="text-gradient">.</span>
             </h2>
-            <p className="mt-7 max-w-md text-[15.5px] text-[#e9e4d8]/60 leading-[1.7] font-light">
+            <p className="mt-7 max-w-md text-[15.5px] text-[#e8edf2]/60 leading-[1.7] font-light">
               Share a few details and a case manager will reach out within one
               business day with a tailored plan.
             </p>
@@ -43,51 +43,51 @@ export function Contact() {
             <div className="mt-10 space-y-3 text-sm">
               <a
                 href="mailto:hello@chromevisa.ca"
-                className="flex items-center gap-3.5 rounded-2xl border border-[#ead7af]/10 bg-[#ead7af]/[0.025] p-4 hover:border-[#ead7af]/25 hover:bg-[#ead7af]/[0.045] transition group"
+                className="flex items-center gap-3.5 rounded-2xl border border-[#7fb6d8]/10 bg-[#7fb6d8]/[0.025] p-4 hover:border-[#7fb6d8]/25 hover:bg-[#7fb6d8]/[0.045] transition group"
               >
-                <span className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-[#7a0d1c] to-[#3a0610] border border-[#ead7af]/15 text-[#ead7af]">
+                <span className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-[#3a6810] to-[#1a330a] border border-[#7fb6d8]/15 text-[#7fb6d8]">
                   <Mail className="h-4 w-4" strokeWidth={1.6} />
                 </span>
                 <div>
-                  <div className="text-[10px] uppercase tracking-[0.22em] text-[#8a8395] font-mono">
+                  <div className="text-[10px] uppercase tracking-[0.22em] text-[#7a8590] font-mono">
                     Email
                   </div>
-                  <div className="text-[#f6f0e1] mt-0.5">hello@chromevisa.ca</div>
+                  <div className="text-[#ffffff] mt-0.5">hello@chromevisa.ca</div>
                 </div>
               </a>
               <a
                 href="tel:+14165550199"
-                className="flex items-center gap-3.5 rounded-2xl border border-[#ead7af]/10 bg-[#ead7af]/[0.025] p-4 hover:border-[#ead7af]/25 hover:bg-[#ead7af]/[0.045] transition"
+                className="flex items-center gap-3.5 rounded-2xl border border-[#7fb6d8]/10 bg-[#7fb6d8]/[0.025] p-4 hover:border-[#7fb6d8]/25 hover:bg-[#7fb6d8]/[0.045] transition"
               >
-                <span className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-[#1f0a14] to-[#0a0a14] border border-[#ead7af]/15 text-[#ead7af]">
+                <span className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-[#0d1d12] to-[#0a0d12] border border-[#7fb6d8]/15 text-[#7fb6d8]">
                   <Phone className="h-4 w-4" strokeWidth={1.6} />
                 </span>
                 <div>
-                  <div className="text-[10px] uppercase tracking-[0.22em] text-[#8a8395] font-mono">
+                  <div className="text-[10px] uppercase tracking-[0.22em] text-[#7a8590] font-mono">
                     Direct line
                   </div>
-                  <div className="text-[#f6f0e1] mt-0.5">+1 (416) 555‑0199</div>
+                  <div className="text-[#ffffff] mt-0.5">+1 (416) 555‑0199</div>
                 </div>
               </a>
-              <div className="flex items-center gap-3.5 rounded-2xl border border-[#ead7af]/10 bg-[#ead7af]/[0.025] p-4">
-                <span className="grid h-11 w-11 place-items-center rounded-xl bg-[#ead7af]/8 border border-[#ead7af]/15 text-[#ead7af]">
+              <div className="flex items-center gap-3.5 rounded-2xl border border-[#7fb6d8]/10 bg-[#7fb6d8]/[0.025] p-4">
+                <span className="grid h-11 w-11 place-items-center rounded-xl bg-[#7fb6d8]/8 border border-[#7fb6d8]/15 text-[#7fb6d8]">
                   <MapPin className="h-4 w-4" strokeWidth={1.6} />
                 </span>
                 <div>
-                  <div className="text-[10px] uppercase tracking-[0.22em] text-[#8a8395] font-mono">
+                  <div className="text-[10px] uppercase tracking-[0.22em] text-[#7a8590] font-mono">
                     Office
                   </div>
-                  <div className="text-[#f6f0e1] mt-0.5">
+                  <div className="text-[#ffffff] mt-0.5">
                     181 Bay Street, Suite 1800 · Toronto, ON M5J 2T3
                   </div>
                 </div>
               </div>
-              <div className="flex items-start gap-3.5 rounded-2xl border border-[#d4b078]/22 bg-[#d4b078]/[0.04] p-4">
-                <span className="grid h-11 w-11 place-items-center rounded-xl bg-[#d4b078]/15 text-[#ead7af]">
+              <div className="flex items-start gap-3.5 rounded-2xl border border-[#3e94c7]/22 bg-[#3e94c7]/[0.04] p-4">
+                <span className="grid h-11 w-11 place-items-center rounded-xl bg-[#3e94c7]/15 text-[#7fb6d8]">
                   <Shield className="h-4 w-4" strokeWidth={1.6} />
                 </span>
-                <div className="text-[13px] text-[#e9e4d8]/82 leading-[1.55] font-light">
-                  Your information is handled under <span className="text-[#ead7af]">CICC confidentiality standards</span>.
+                <div className="text-[13px] text-[#e8edf2]/82 leading-[1.55] font-light">
+                  Your information is handled under <span className="text-[#7fb6d8]">CICC confidentiality standards</span>.
                   We never share, sell, or spam.
                 </div>
               </div>
@@ -106,7 +106,7 @@ export function Contact() {
             }}
             className="glass-strong rounded-[28px] p-7 md:p-9 relative"
           >
-            <div className="pointer-events-none absolute inset-3 rounded-[22px] border border-[#ead7af]/8" />
+            <div className="pointer-events-none absolute inset-3 rounded-[22px] border border-[#7fb6d8]/8" />
             <div className="relative">
               <div className="grid gap-4 md:grid-cols-2">
                 <Field label="Full name" name="name" placeholder="Jane Kaur" required />
@@ -116,14 +116,14 @@ export function Contact() {
               </div>
 
               <div className="mt-5">
-                <label className="text-[10px] uppercase tracking-[0.22em] text-[#8a8395] font-mono">
+                <label className="text-[10px] uppercase tracking-[0.22em] text-[#7a8590] font-mono">
                   Pathway of interest
                 </label>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {pathways.map((p) => (
                     <label key={p} className="group cursor-pointer">
                       <input type="radio" name="pathway" value={p} className="peer sr-only" />
-                      <span className="inline-flex items-center gap-2 rounded-full border border-[#ead7af]/12 bg-[#ead7af]/[0.025] px-3.5 py-2 text-[13px] text-[#e9e4d8]/75 transition peer-checked:border-[#d4b078]/55 peer-checked:bg-[#d4b078]/12 peer-checked:text-[#fff8e9] hover:border-[#ead7af]/28 hover:text-[#f6f0e1]">
+                      <span className="inline-flex items-center gap-2 rounded-full border border-[#7fb6d8]/12 bg-[#7fb6d8]/[0.025] px-3.5 py-2 text-[13px] text-[#e8edf2]/75 transition peer-checked:border-[#3e94c7]/55 peer-checked:bg-[#3e94c7]/12 peer-checked:text-[#ffffff] hover:border-[#7fb6d8]/28 hover:text-[#ffffff]">
                         {p}
                       </span>
                     </label>
@@ -132,22 +132,22 @@ export function Contact() {
               </div>
 
               <div className="mt-5">
-                <label className="text-[10px] uppercase tracking-[0.22em] text-[#8a8395] font-mono">
+                <label className="text-[10px] uppercase tracking-[0.22em] text-[#7a8590] font-mono">
                   Tell us about your situation
                 </label>
                 <textarea
                   name="message"
                   rows={4}
                   placeholder="Education, work history, family, timeline, any prior refusals…"
-                  className="mt-2.5 w-full rounded-2xl border border-[#ead7af]/12 bg-[#ead7af]/[0.025] px-4 py-3.5 text-[#f6f0e1] placeholder:text-[#8a8395]/65 focus:border-[#d4b078]/45 focus:outline-none focus:ring-2 focus:ring-[#d4b078]/20 transition font-light"
+                  className="mt-2.5 w-full rounded-2xl border border-[#7fb6d8]/12 bg-[#7fb6d8]/[0.025] px-4 py-3.5 text-[#ffffff] placeholder:text-[#7a8590]/65 focus:border-[#3e94c7]/45 focus:outline-none focus:ring-2 focus:ring-[#3e94c7]/20 transition font-light"
                 />
               </div>
 
-              <label className="mt-5 flex items-start gap-3 text-[12px] text-[#e9e4d8]/55 font-light">
+              <label className="mt-5 flex items-start gap-3 text-[12px] text-[#e8edf2]/55 font-light">
                 <input
                   type="checkbox"
                   required
-                  className="mt-0.5 h-4 w-4 rounded border-[#ead7af]/25 bg-[#ead7af]/8 text-[#d4b078] focus:ring-[#d4b078]/35"
+                  className="mt-0.5 h-4 w-4 rounded border-[#7fb6d8]/25 bg-[#7fb6d8]/8 text-[#3e94c7] focus:ring-[#3e94c7]/35"
                 />
                 <span>
                   I agree that Chrome Visa Solution may contact me about my
@@ -199,7 +199,7 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="text-[10px] uppercase tracking-[0.22em] text-[#8a8395] font-mono">
+      <span className="text-[10px] uppercase tracking-[0.22em] text-[#7a8590] font-mono">
         {label}
       </span>
       <input
@@ -207,7 +207,7 @@ function Field({
         type={type}
         placeholder={placeholder}
         required={required}
-        className="mt-2.5 w-full rounded-2xl border border-[#ead7af]/12 bg-[#ead7af]/[0.025] px-4 py-3.5 text-[#f6f0e1] placeholder:text-[#8a8395]/65 focus:border-[#d4b078]/45 focus:outline-none focus:ring-2 focus:ring-[#d4b078]/20 transition font-light"
+        className="mt-2.5 w-full rounded-2xl border border-[#7fb6d8]/12 bg-[#7fb6d8]/[0.025] px-4 py-3.5 text-[#ffffff] placeholder:text-[#7a8590]/65 focus:border-[#3e94c7]/45 focus:outline-none focus:ring-2 focus:ring-[#3e94c7]/20 transition font-light"
       />
     </label>
   );

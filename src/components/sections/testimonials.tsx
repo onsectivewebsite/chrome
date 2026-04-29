@@ -61,7 +61,7 @@ function Initials({ name }: { name: string }) {
     .join("")
     .slice(0, 2);
   return (
-    <span className="grid h-11 w-11 place-items-center rounded-full border border-[#ead7af]/20 bg-gradient-to-br from-[#1a0a14] to-[#0a0a10] font-display text-[14px] text-[#ead7af]">
+    <span className="grid h-11 w-11 place-items-center rounded-full border border-[#7fb6d8]/20 bg-gradient-to-br from-[#0a1d10] to-[#0a0d12] font-display text-[14px] text-[#7fb6d8]">
       {i}
     </span>
   );
@@ -91,11 +91,11 @@ export function Testimonials() {
           <div className="md:justify-self-end flex flex-col gap-2.5">
             <div className="flex items-center gap-1">
               {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="h-4 w-4 fill-[#d4b078] text-[#d4b078]" />
+                <Star key={i} className="h-4 w-4 fill-[#3e94c7] text-[#3e94c7]" />
               ))}
             </div>
-            <span className="text-[13px] text-[#e9e4d8]/65 font-light">
-              <span className="text-[#f6f0e1] font-medium font-display text-[15px]">4.96</span>{" "}
+            <span className="text-[13px] text-[#e8edf2]/65 font-light">
+              <span className="text-[#ffffff] font-medium font-display text-[15px]">4.96</span>{" "}
               / 5 · 1,240+ verified reviews
             </span>
           </div>
@@ -111,37 +111,37 @@ export function Testimonials() {
               transition={{ duration: 0.65, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}
               className="card-hover glass group relative flex h-full flex-col rounded-[22px] p-7 overflow-hidden"
             >
-              <div className="pointer-events-none absolute -right-12 -top-12 h-32 w-32 rounded-full bg-gradient-to-br from-[#d4b078]/10 to-transparent blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="pointer-events-none absolute -right-12 -top-12 h-32 w-32 rounded-full bg-gradient-to-br from-[#3e94c7]/10 to-transparent blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               {/* Editorial open quote */}
               <span
                 aria-hidden
-                className="absolute -top-2 left-6 font-display text-[80px] leading-none text-[#d4b078]/22 select-none"
+                className="absolute -top-2 left-6 font-display text-[80px] leading-none text-[#3e94c7]/22 select-none"
               >
                 &ldquo;
               </span>
 
               <div className="flex items-center gap-1 relative">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="h-3.5 w-3.5 fill-[#d4b078] text-[#d4b078]" />
+                  <Star key={i} className="h-3.5 w-3.5 fill-[#3e94c7] text-[#3e94c7]" />
                 ))}
               </div>
 
-              <blockquote className="mt-5 text-[14.5px] leading-[1.7] text-[#e9e4d8]/82 font-light italic">
+              <blockquote className="mt-5 text-[14.5px] leading-[1.7] text-[#e8edf2]/82 font-light italic">
                 {t.quote}
               </blockquote>
 
-              <figcaption className="mt-7 flex items-center justify-between border-t border-[#ead7af]/10 pt-5">
+              <figcaption className="mt-7 flex items-center justify-between border-t border-[#7fb6d8]/10 pt-5">
                 <div className="flex items-center gap-3">
                   <Initials name={t.name} />
                   <div>
-                    <div className="font-display text-[15px] font-medium text-[#f6f0e1]">{t.name}</div>
-                    <div className="text-[11px] text-[#8a8395] mt-0.5">
-                      {t.role} <span className="text-[#d4b078]/60">·</span> {t.place}
+                    <div className="font-display text-[15px] font-medium text-[#ffffff]">{t.name}</div>
+                    <div className="text-[11px] text-[#7a8590] mt-0.5">
+                      {t.role} <span className="text-[#3e94c7]/60">·</span> {t.place}
                     </div>
                   </div>
                 </div>
-                <span className="rounded-full border border-[#ead7af]/14 bg-[#ead7af]/[0.04] px-2.5 py-1 text-[9.5px] uppercase tracking-[0.18em] text-[#d4b078]/85 font-mono whitespace-nowrap">
+                <span className="rounded-full border border-[#7fb6d8]/14 bg-[#7fb6d8]/[0.04] px-2.5 py-1 text-[9.5px] uppercase tracking-[0.18em] text-[#3e94c7]/85 font-mono whitespace-nowrap">
                   {t.badge}
                 </span>
               </figcaption>

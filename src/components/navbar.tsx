@@ -60,7 +60,7 @@ export function Navbar() {
               <div key={item.label} className="group relative">
                 <Link
                   href={item.href}
-                  className="inline-flex items-center gap-1 rounded-full px-4 py-2 text-[#e9e4d8]/75 hover:text-[#fff8e9] transition-colors duration-300"
+                  className="inline-flex items-center gap-1 rounded-full px-4 py-2 text-[#e8edf2]/75 hover:text-[#ffffff] transition-colors duration-300"
                 >
                   {item.label}
                   {item.sub && (
@@ -70,18 +70,18 @@ export function Navbar() {
                 {item.sub && (
                   <div className="pointer-events-none absolute left-1/2 top-full w-[300px] -translate-x-1/2 pt-3 opacity-0 transition-all duration-400 group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0 translate-y-2">
                     <div className="glass-strong rounded-2xl p-2.5">
-                      <div className="px-3 pb-2 pt-1 text-[10px] uppercase tracking-[0.22em] text-[#d4b078]/80 font-mono">
+                      <div className="px-3 pb-2 pt-1 text-[10px] uppercase tracking-[0.22em] text-[#3e94c7]/80 font-mono">
                         Pathways
                       </div>
                       {item.sub.map((s) => (
                         <Link
                           key={s.label}
                           href={s.href}
-                          className="flex items-center justify-between rounded-xl px-3 py-2.5 text-[13px] text-[#e9e4d8]/85 hover:bg-[#ead7af]/5 hover:text-[#fff8e9] transition group/item"
+                          className="flex items-center justify-between rounded-xl px-3 py-2.5 text-[13px] text-[#e8edf2]/85 hover:bg-[#7fb6d8]/5 hover:text-[#ffffff] transition group/item"
                         >
                           <span className="flex flex-col">
                             <span>{s.label}</span>
-                            <span className="text-[10px] tracking-wider text-[#8a8395] uppercase">{s.note}</span>
+                            <span className="text-[10px] tracking-wider text-[#7a8590] uppercase">{s.note}</span>
                           </span>
                           <ArrowUpRight className="h-3.5 w-3.5 opacity-40 group-hover/item:opacity-90 group-hover/item:translate-x-0.5 group-hover/item:-translate-y-0.5 transition" />
                         </Link>
@@ -101,7 +101,7 @@ export function Navbar() {
             <button
               type="button"
               onClick={() => setOpen((v) => !v)}
-              className="grid lg:hidden h-10 w-10 place-items-center rounded-xl border border-[#ead7af]/15 bg-[#ead7af]/5 text-[#f6f0e1]"
+              className="grid lg:hidden h-10 w-10 place-items-center rounded-xl border border-[#7fb6d8]/15 bg-[#7fb6d8]/5 text-[#ffffff]"
               aria-label="Toggle menu"
             >
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -125,7 +125,7 @@ export function Navbar() {
                   key={item.label}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="flex items-center justify-between rounded-xl px-3 py-3 text-[#e9e4d8]/85 hover:bg-[#ead7af]/5 hover:text-[#fff8e9]"
+                  className="flex items-center justify-between rounded-xl px-3 py-3 text-[#e8edf2]/85 hover:bg-[#7fb6d8]/5 hover:text-[#ffffff]"
                 >
                   <span>{item.label}</span>
                   <ArrowUpRight className="h-4 w-4 opacity-50" />
