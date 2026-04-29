@@ -27,12 +27,12 @@ export function CTA() {
               <span className="eyebrow">
                 <span className="rule-gold" /> Free · 30 minutes · No obligation
               </span>
-              <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.4rem)] font-medium leading-[1.02] tracking-[-0.024em]">
+              <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.4rem)] font-medium leading-[1.1] tracking-[-0.024em]">
                 <span className="text-gradient">Let&apos;s map your path </span>
                 <span className="text-gradient-accent italic font-semibold">to Canada</span>
                 <span className="text-gradient">.</span>
               </h2>
-              <p className="mt-7 max-w-lg text-[15.5px] text-[#2a3548]/70 leading-[1.7] font-light">
+              <p className="mt-7 max-w-lg text-[15.5px] text-[#4a5462] leading-[1.7] font-light">
                 Book a complimentary consultation with a Regulated Canadian
                 Immigration Consultant. You&apos;ll leave the call with a clear
                 shortlist of programs, timelines, and next steps — whether you
@@ -62,7 +62,7 @@ export function CTA() {
                   className="flex items-start gap-3.5 rounded-2xl border border-[#3e94c7]/10 bg-[#3e94c7]/[0.025] p-4 transition hover:border-[#3e94c7]/[0.22] hover:bg-[#3e94c7]/[0.04]"
                 >
                   <CheckCircle2 className="mt-0.5 h-5 w-5 text-[#3e94c7] shrink-0" strokeWidth={1.5} />
-                  <span className="text-[14px] text-[#0d1730]/[0.88] font-light leading-[1.55]">{t}</span>
+                  <span className="text-[14px] text-[#0d1730]] font-light leading-[1.55]">{t}</span>
                 </li>
               ))}
             </ul>

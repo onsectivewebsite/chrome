@@ -62,12 +62,12 @@ export function WhyUs() {
           <span className="eyebrow">
             <span className="rule-gold" /> The Difference
           </span>
-          <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.2rem)] font-medium leading-[1.02] tracking-[-0.024em]">
+          <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.2rem)] font-medium leading-[1.1] tracking-[-0.024em]">
             <span className="text-gradient">A different kind of </span>
             <span className="text-gradient-accent italic font-semibold">immigration firm</span>
             <span className="text-gradient">.</span>
           </h2>
-          <p className="mt-7 text-[15.5px] text-[#2a3548]/60 leading-[1.7] font-light max-w-xl mx-auto">
+          <p className="mt-7 text-[15.5px] text-[#4a5462] leading-[1.7] font-light max-w-xl mx-auto">
             Built by immigrants, for immigrants — with the process rigour you&apos;d
             expect from a top‑tier consulting firm.
           </p>
@@ -97,7 +97,7 @@ export function WhyUs() {
               <h3 className="mt-7 font-display text-[24px] font-medium tracking-tight text-[#0d1730] leading-[1.15]">
                 {p.title}
               </h3>
-              <p className="mt-3 text-[14px] text-[#2a3548]/[0.62] leading-[1.7] font-light">
+              <p className="mt-3 text-[14px] text-[#4a5462]] leading-[1.7] font-light">
                 {p.desc}
               </p>
             </motion.div>

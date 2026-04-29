@@ -82,7 +82,7 @@ export function Testimonials() {
             <span className="eyebrow">
               <span className="rule-gold" /> Client Stories
             </span>
-            <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.2rem)] font-medium leading-[1.02] tracking-[-0.024em]">
+            <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.2rem)] font-medium leading-[1.1] tracking-[-0.024em]">
               <span className="text-gradient">Real people.</span>{" "}
               <span className="text-gradient-accent italic font-semibold">Real</span>{" "}
               <span className="text-gradient">maple leaves.</span>
@@ -94,7 +94,7 @@ export function Testimonials() {
                 <Star key={i} className="h-4 w-4 fill-[#3e94c7] text-[#3e94c7]" />
               ))}
             </div>
-            <span className="text-[13px] text-[#2a3548]/65 font-light">
+            <span className="text-[13px] text-[#4a5462] font-light">
               <span className="text-[#0d1730] font-medium font-display text-[15px]">4.96</span>{" "}
               / 5 · 1,240+ verified reviews
             </span>
@@ -127,7 +127,7 @@ export function Testimonials() {
                 ))}
               </div>
 
-              <blockquote className="mt-5 text-[14.5px] leading-[1.7] text-[#2a3548]/[0.82] font-light italic">
+              <blockquote className="mt-5 text-[14.5px] leading-[1.7] text-[#2a3548]] font-light italic">
                 {t.quote}
               </blockquote>
 

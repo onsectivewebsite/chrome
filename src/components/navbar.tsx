@@ -53,14 +53,14 @@ export function Navbar() {
               : "max-w-7xl rounded-[24px] glass px-6 py-3.5"
           }`}
         >
-          <BrandMark size={scrolled ? 34 : 38} />
+          <BrandMark size={scrolled ? 52 : 60} />
 
           <nav className="hidden lg:flex items-center gap-0.5 text-[13.5px]">
             {nav.map((item) => (
               <div key={item.label} className="group relative">
                 <Link
                   href={item.href}
-                  className="inline-flex items-center gap-1 rounded-full px-4 py-2 text-[#2a3548]/75 hover:text-[#0d1730] transition-colors duration-300"
+                  className="inline-flex items-center gap-1 rounded-full px-4 py-2 text-[#2a3548] hover:text-[#0d1730] transition-colors duration-300"
                 >
                   {item.label}
                   {item.sub && (
@@ -77,7 +77,7 @@ export function Navbar() {
                         <Link
                           key={s.label}
                           href={s.href}
-                          className="flex items-center justify-between rounded-xl px-3 py-2.5 text-[13px] text-[#2a3548]/85 hover:bg-[#3e94c7]/5 hover:text-[#0d1730] transition group/item"
+                          className="flex items-center justify-between rounded-xl px-3 py-2.5 text-[13px] text-[#2a3548] hover:bg-[#3e94c7]/5 hover:text-[#0d1730] transition group/item"
                         >
                           <span className="flex flex-col">
                             <span>{s.label}</span>
@@ -125,7 +125,7 @@ export function Navbar() {
                   key={item.label}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="flex items-center justify-between rounded-xl px-3 py-3 text-[#2a3548]/85 hover:bg-[#3e94c7]/5 hover:text-[#0d1730]"
+                  className="flex items-center justify-between rounded-xl px-3 py-3 text-[#2a3548] hover:bg-[#3e94c7]/5 hover:text-[#0d1730]"
                 >
                   <span>{item.label}</span>
                   <ArrowUpRight className="h-4 w-4 opacity-50" />

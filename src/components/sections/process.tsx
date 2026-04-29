@@ -55,12 +55,12 @@ export function Process() {
           <span className="eyebrow">
             <span className="rule-gold" /> The Method
           </span>
-          <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.2rem)] font-medium leading-[1.02] tracking-[-0.024em]">
+          <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.2rem)] font-medium leading-[1.1] tracking-[-0.024em]">
             <span className="text-gradient">A precision </span>
             <span className="text-gradient-accent italic font-semibold">five‑act</span>
             <span className="text-gradient"> system.</span>
           </h2>
-          <p className="mt-7 text-[15.5px] text-[#2a3548]/60 leading-[1.7] font-light max-w-xl mx-auto">
+          <p className="mt-7 text-[15.5px] text-[#4a5462] leading-[1.7] font-light max-w-xl mx-auto">
             Most applications fail not because of who you are, but how the case
             is built. Our process is the safeguard.
           </p>
@@ -99,7 +99,7 @@ export function Process() {
                   <h3 className="mt-2 font-display text-[22px] font-medium tracking-tight text-[#0d1730]">
                     {s.title}
                   </h3>
-                  <p className="mt-3 text-[13.5px] text-[#2a3548]/60 leading-[1.65] font-light max-w-[230px] mx-auto">
+                  <p className="mt-3 text-[13.5px] text-[#4a5462] leading-[1.65] font-light max-w-[230px] mx-auto">
                     {s.desc}
                   </p>
                 </div>

@@ -31,7 +31,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 26 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.0, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-8 font-display text-[clamp(2.7rem,6.4vw,5.6rem)] font-medium leading-[1.0] tracking-[-0.025em]"
+              className="mt-8 font-display text-[clamp(2.7rem,6.4vw,5.6rem)] font-medium leading-[1.08] tracking-[-0.025em]"
             >
               <span className="text-gradient">Your</span>
               <span className="relative mx-3 inline-block align-middle">
@@ -53,7 +53,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="mt-9 max-w-xl text-[16.5px] md:text-[17.5px] text-[#2a3548]/80 leading-[1.65] font-light"
+              className="mt-9 max-w-xl text-[16.5px] md:text-[17.5px] text-[#2a3548] leading-[1.65] font-light"
             >
               A Toronto‑based immigration consultancy for the few who don&apos;t leave
               their future to chance. Regulated counsel, an engineered process,
@@ -80,7 +80,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.75 }}
-              className="mt-12 flex flex-wrap items-center gap-7 text-[13px] text-[#2a3548]/75"
+              className="mt-12 flex flex-wrap items-center gap-7 text-[13px] text-[#2a3548]"
             >
               <div className="flex items-center gap-2.5">
                 <ShieldCheck className="h-4 w-4 text-[#67b219]" strokeWidth={1.8} />
@@ -217,7 +217,7 @@ export function Hero() {
         <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#fafbf7] to-transparent z-10" />
         <div className="flex animate-marquee whitespace-nowrap">
           {Array.from({ length: 2 }).map((_, r) => (
-            <div key={r} className="flex shrink-0 items-center gap-16 px-8 text-[12px] text-[#2a3548]/65">
+            <div key={r} className="flex shrink-0 items-center gap-16 px-8 text-[12px] text-[#4a5462]">
               {[
                 "Express Entry",
                 "PNP · Ontario · BC · Alberta",

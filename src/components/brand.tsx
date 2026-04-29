@@ -2,16 +2,16 @@ import Link from "next/link";
 import Image from "next/image";
 
 export function BrandMark({
-  size = 40,
-  withWord = true,
+  size = 56,
 }: {
   size?: number;
+  /** Kept for backwards compatibility — the logo already contains the wordmark */
   withWord?: boolean;
 }) {
   return (
     <Link
       href="/"
-      className="group inline-flex items-center gap-3 select-none"
+      className="group inline-flex items-center select-none"
       aria-label="Chrome Visa Solutions"
     >
       <Image
@@ -20,18 +20,8 @@ export function BrandMark({
         width={size}
         height={size}
         priority
-        className="object-contain"
+        className="object-contain transition-transform duration-300 group-hover:scale-[1.03]"
       />
-      {withWord && (
-        <span className="leading-tight">
-          <span className="block font-display text-[17px] font-semibold tracking-tight text-[#0d1730]">
-            Chrome <span className="text-[#3e94c7]">Visa</span>
-          </span>
-          <span className="block font-mono text-[9.5px] uppercase tracking-[0.32em] text-[#67b219] font-semibold">
-            Solutions
-          </span>
-        </span>
-      )}
     </Link>
   );
 }

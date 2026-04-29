@@ -54,12 +54,12 @@ export function Stats() {
             <span className="eyebrow">
               <span className="rule-gold" /> Measured, not promised
             </span>
-            <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.2rem)] font-medium leading-[1.02] tracking-[-0.024em]">
+            <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.2rem)] font-medium leading-[1.1] tracking-[-0.024em]">
               <span className="text-gradient">The numbers behind a </span>
               <span className="text-gradient-accent italic font-semibold">premium</span>
               <span className="text-gradient"> consultancy.</span>
             </h2>
-            <p className="mt-7 max-w-md text-[15.5px] text-[#2a3548]/60 leading-[1.7] font-light">
+            <p className="mt-7 max-w-md text-[15.5px] text-[#4a5462] leading-[1.7] font-light">
               Canadian immigration is full of noise. We publish our real
               outcomes — so you can decide on evidence, not advertising.
             </p>
@@ -74,7 +74,7 @@ export function Stats() {
                   />
                 ))}
               </div>
-              <div className="text-[12.5px] text-[#2a3548]/55 font-light">
+              <div className="text-[12.5px] text-[#6b7585] font-light">
                 Trusted by clients from <span className="text-[#3e94c7]">60+ countries</span>
               </div>
             </div>

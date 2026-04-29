@@ -63,15 +63,15 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 pt-24 pb-12">
         <div className="grid gap-16 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div className="space-y-7">
-            <BrandMark size={42} />
-            <p className="max-w-sm text-[14px] text-[#2a3548]/60 leading-[1.7] font-light">
+            <BrandMark size={84} />
+            <p className="max-w-sm text-[14px] text-[#4a5462] leading-[1.7] font-light">
               A Regulated Canadian Immigration Consultancy helping professionals,
               entrepreneurs and families turn Canada from a destination into home.
             </p>
             <div className="space-y-3 text-[13.5px]">
               <a
                 href="mailto:hello@chromevisa.ca"
-                className="flex items-center gap-3 text-[#2a3548]/75 hover:text-[#0d1730] transition group"
+                className="flex items-center gap-3 text-[#2a3548] hover:text-[#0d1730] transition group"
               >
                 <span className="grid h-9 w-9 place-items-center rounded-lg bg-[#3e94c7]/5 border border-[#3e94c7]/[0.12] group-hover:border-[#3e94c7]/30 transition">
                   <Mail className="h-4 w-4" strokeWidth={1.6} />
@@ -80,14 +80,14 @@ export function Footer() {
               </a>
               <a
                 href="tel:+14165550199"
-                className="flex items-center gap-3 text-[#2a3548]/75 hover:text-[#0d1730] transition group"
+                className="flex items-center gap-3 text-[#2a3548] hover:text-[#0d1730] transition group"
               >
                 <span className="grid h-9 w-9 place-items-center rounded-lg bg-[#3e94c7]/5 border border-[#3e94c7]/[0.12] group-hover:border-[#3e94c7]/30 transition">
                   <Phone className="h-4 w-4" strokeWidth={1.6} />
                 </span>
                 +1 (416) 555‑0199
               </a>
-              <div className="flex items-center gap-3 text-[#2a3548]/75">
+              <div className="flex items-center gap-3 text-[#2a3548]">
                 <span className="grid h-9 w-9 place-items-center rounded-lg bg-[#3e94c7]/5 border border-[#3e94c7]/[0.12]">
                   <MapPin className="h-4 w-4" strokeWidth={1.6} />
                 </span>
@@ -105,7 +105,7 @@ export function Footer() {
                   key={label}
                   href="#"
                   aria-label={label}
-                  className="grid h-10 w-10 place-items-center rounded-xl border border-[#3e94c7]/[0.12] bg-[#3e94c7]/[0.025] text-[#2a3548]/65 hover:text-[#3e94c7] hover:border-[#3e94c7]/35 hover:bg-[#3e94c7]/[0.06] transition"
+                  className="grid h-10 w-10 place-items-center rounded-xl border border-[#3e94c7]/[0.12] bg-[#3e94c7]/[0.025] text-[#4a5462] hover:text-[#3e94c7] hover:border-[#3e94c7]/35 hover:bg-[#3e94c7]/[0.06] transition"
                 >
                   <SocialIcon name={name} />
                 </a>
@@ -123,7 +123,7 @@ export function Footer() {
                   <li key={l}>
                     <Link
                       href="#"
-                      className="group inline-flex items-center gap-1.5 text-[#2a3548]/55 hover:text-[#0d1730] transition font-light"
+                      className="group inline-flex items-center gap-1.5 text-[#6b7585] hover:text-[#0d1730] transition font-light"
                     >
                       {l}
                       <ArrowUpRight className="h-3 w-3 opacity-0 group-hover:opacity-70 -translate-x-1 group-hover:translate-x-0 transition" />

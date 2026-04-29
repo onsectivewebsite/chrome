@@ -30,12 +30,12 @@ export function Contact() {
             <span className="eyebrow">
               <span className="rule-gold" /> Get in touch
             </span>
-            <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.2rem)] font-medium leading-[1.02] tracking-[-0.024em]">
+            <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.2rem)] font-medium leading-[1.1] tracking-[-0.024em]">
               <span className="text-gradient">Tell us your </span>
               <span className="text-gradient-accent italic font-semibold">story</span>
               <span className="text-gradient">.</span>
             </h2>
-            <p className="mt-7 max-w-md text-[15.5px] text-[#2a3548]/60 leading-[1.7] font-light">
+            <p className="mt-7 max-w-md text-[15.5px] text-[#4a5462] leading-[1.7] font-light">
               Share a few details and a case manager will reach out within one
               business day with a tailored plan.
             </p>
@@ -86,7 +86,7 @@ export function Contact() {
                 <span className="grid h-11 w-11 place-items-center rounded-xl bg-[#67b219]/[0.12] border border-[#67b219]/25 text-[#4f8a13]">
                   <Shield className="h-4 w-4" strokeWidth={1.8} />
                 </span>
-                <div className="text-[13px] text-[#2a3548]/[0.82] leading-[1.55] font-light">
+                <div className="text-[13px] text-[#2a3548]] leading-[1.55] font-light">
                   Your information is handled under <span className="text-[#3e94c7]">CICC confidentiality standards</span>.
                   We never share, sell, or spam.
                 </div>
@@ -123,7 +123,7 @@ export function Contact() {
                   {pathways.map((p) => (
                     <label key={p} className="group cursor-pointer">
                       <input type="radio" name="pathway" value={p} className="peer sr-only" />
-                      <span className="inline-flex items-center gap-2 rounded-full border border-[#3e94c7]/[0.12] bg-[#3e94c7]/[0.025] px-3.5 py-2 text-[13px] text-[#2a3548]/75 transition peer-checked:border-[#3e94c7]/55 peer-checked:bg-[#3e94c7]/[0.12] peer-checked:text-[#0d1730] hover:border-[#3e94c7]/[0.28] hover:text-[#0d1730]">
+                      <span className="inline-flex items-center gap-2 rounded-full border border-[#3e94c7]/[0.12] bg-[#3e94c7]/[0.025] px-3.5 py-2 text-[13px] text-[#2a3548] transition peer-checked:border-[#3e94c7]/55 peer-checked:bg-[#3e94c7]/[0.12] peer-checked:text-[#0d1730] hover:border-[#3e94c7]/[0.28] hover:text-[#0d1730]">
                         {p}
                       </span>
                     </label>
@@ -143,7 +143,7 @@ export function Contact() {
                 />
               </div>
 
-              <label className="mt-5 flex items-start gap-3 text-[12px] text-[#2a3548]/55 font-light">
+              <label className="mt-5 flex items-start gap-3 text-[12px] text-[#6b7585] font-light">
                 <input
                   type="checkbox"
                   required
