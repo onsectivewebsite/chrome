@@ -9,20 +9,21 @@ import { BrandMark } from "./brand";
 const nav = [
   {
     label: "Services",
-    href: "#services",
+    href: "/#services",
     sub: [
-      { label: "Express Entry", href: "#services", note: "Permanent Residency" },
-      { label: "Provincial Nominee", href: "#services", note: "PNP streams" },
-      { label: "Work Permits & LMIA", href: "#services", note: "Employment" },
-      { label: "Study Permits", href: "#services", note: "Education" },
-      { label: "Family Sponsorship", href: "#services", note: "Reunion" },
-      { label: "Business Immigration", href: "#services", note: "Investor" },
+      { label: "Express Entry", href: "/#services", note: "Permanent Residency" },
+      { label: "Provincial Nominee", href: "/#services", note: "PNP streams" },
+      { label: "Work Permits & LMIA", href: "/#services", note: "Employment" },
+      { label: "Study Permits", href: "/#services", note: "Education" },
+      { label: "Family Sponsorship", href: "/#services", note: "Reunion" },
+      { label: "Business Immigration", href: "/#services", note: "Investor" },
     ],
   },
-  { label: "Process", href: "#process" },
-  { label: "About", href: "#about" },
-  { label: "Stories", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
+  { label: "Process", href: "/#process" },
+  { label: "About", href: "/#about" },
+  { label: "Stories", href: "/#testimonials" },
+  { label: "Newsroom", href: "/news" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export function Navbar() {
@@ -94,7 +95,7 @@ export function Navbar() {
           </nav>
 
           <div className="flex items-center gap-2.5">
-            <Link href="#contact" className="hidden sm:inline-flex btn-primary text-[13px] py-2.5 px-4">
+            <Link href="/#contact" className="hidden sm:inline-flex btn-primary text-[13px] py-2.5 px-4">
               Book a Consult
               <ArrowUpRight className="h-3.5 w-3.5" />
             </Link>
@@ -132,7 +133,7 @@ export function Navbar() {
                 </Link>
               ))}
               <Link
-                href="#contact"
+                href="/#contact"
                 onClick={() => setOpen(false)}
                 className="btn-primary mt-3 justify-center"
               >
