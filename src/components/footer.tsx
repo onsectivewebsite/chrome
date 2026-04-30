@@ -63,7 +63,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 pt-24 pb-12">
         <div className="grid gap-16 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div className="space-y-7">
-            <BrandMark size={140} />
+            <BrandMark height={100} />
             <p className="max-w-sm text-[14.5px] text-[#4a5462] leading-[1.7]">
               Brampton-based Canadian immigration consultancy. We represent
               professionals, families and entrepreneurs across every Canadian

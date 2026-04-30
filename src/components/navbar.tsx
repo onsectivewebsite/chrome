@@ -105,7 +105,7 @@ export function Navbar() {
               scrolled ? "py-2" : "py-3"
             }`}
           >
-            <BrandMark size={scrolled ? 80 : 96} />
+            <BrandMark height={scrolled ? 52 : 68} />
 
             <nav className="hidden lg:flex items-center gap-1">
               {nav.map((item) => (
