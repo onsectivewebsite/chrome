@@ -30,7 +30,7 @@ const nav = [
     ],
   },
   { label: "Process", href: "/#process" },
-  { label: "About", href: "/#about" },
+  { label: "About", href: "/about" },
   { label: "Newsroom", href: "/news" },
   { label: "Assessment", href: "/assessment" },
   { label: "Contact", href: "/#contact" },

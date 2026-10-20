@@ -23,6 +23,7 @@ const cols: { title: string; links: FooterLink[] }[] = [
   {
     title: "Firm",
     links: [
+      { label: "About Us", href: "/about" },
       { label: "Our Process", href: "/#process" },
       { label: "Free Assessment", href: "/assessment" },
       { label: "Newsroom", href: "/news" },
