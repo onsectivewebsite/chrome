@@ -17,6 +17,8 @@ import {
   Phone,
   Mail,
 } from "lucide-react";
+import Link from "next/link";
+import { submitForm } from "@/lib/submit";
 
 const SECTIONS = [
   { id: "personal", label: "Personal Profile", icon: User },
@@ -86,11 +88,21 @@ type FormState = "idle" | "sending" | "sent";
 
 export function AssessmentForm() {
   const [state, setState] = useState<FormState>("idle");
+  const [error, setError] = useState<string | null>(null);
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const form = e.currentTarget;
     setState("sending");
-    setTimeout(() => setState("sent"), 1400);
+    setError(null);
+    const err = await submitForm(form);
+    if (err) {
+      setError(err);
+      setState("idle");
+    } else {
+      form.reset();
+      setState("sent");
+    }
   }
 
   return (
@@ -195,6 +207,9 @@ export function AssessmentForm() {
               onSubmit={onSubmit}
               className="space-y-12"
             >
+              <input type="hidden" name="formType" value="assessment" />
+              <input type="text" name="company_website" tabIndex={-1} autoComplete="off" aria-hidden className="hidden" />
+
               <PersonalProfile />
               <LanguageSkills />
               <Education />
@@ -232,7 +247,11 @@ export function AssessmentForm() {
                     <span className="text-[#0d1730] font-medium">
                       CICC confidentiality standards
                     </span>{" "}
-                    and is not shared with any third party.
+                    and is not shared with any third party. See our{" "}
+                    <Link href="/privacy" className="underline underline-offset-2 hover:text-[#0d1730]">
+                      privacy policy
+                    </Link>
+                    .
                   </span>
                 </label>
 
@@ -261,8 +280,15 @@ export function AssessmentForm() {
                   )}
                 </button>
 
+                {error && (
+                  <p role="alert" className="mt-4 text-[13px] text-[#b3122a] text-center">
+                    {error} <a href="mailto:info@chromevisa.ca" className="underline">info@chromevisa.ca</a> ·{" "}
+                    <a href="tel:+16475374581" className="underline">+1 (647) 537‑4581</a>
+                  </p>
+                )}
+
                 <p className="mt-4 text-[11.5px] text-[#6b7585] text-center font-mono tracking-wider uppercase">
-                  Reviewed by RCIC #R000000 · Brampton, Ontario
+                  Reviewed by a CICC-licensed RCIC · Brampton, Ontario
                 </p>
               </div>
             </motion.form>

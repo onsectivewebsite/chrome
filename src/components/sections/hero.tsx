@@ -1,10 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, PlayCircle, ShieldCheck, Award, Plane, Globe2 } from "lucide-react";
+import { ArrowRight, PlayCircle, ShieldCheck, Landmark, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import type { Draw } from "@/lib/ircc";
+import { formatDate } from "@/lib/format";
+import { SITE } from "@/lib/site";
 
-export function Hero() {
+export function Hero({
+  latest,
+  previous,
+  poolSize,
+}: {
+  latest: Draw | null;
+  previous: Draw | null;
+  poolSize: number | null;
+}) {
+  const delta = latest && previous ? latest.crs - previous.crs : null;
   return (
     <section className="relative min-h-[100svh] w-full overflow-hidden pt-44 noise">
       {/* Soft ambient brand blobs */}
@@ -24,7 +36,13 @@ export function Hero() {
               className="eyebrow"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-[#67b219] shadow-[0_0_10px_2px_rgba(103,178,25,0.55)]" />
-              CICC RCIC <span className="text-[#6b7585] mx-1">·</span> #R000000 <span className="text-[#6b7585] mx-1">·</span> Brampton, ON
+              CICC RCIC{" "}
+              {SITE.rcicNumber && (
+                <>
+                  <span className="text-[#6b7585] mx-1">·</span> {SITE.rcicNumber}{" "}
+                </>
+              )}
+              <span className="text-[#6b7585] mx-1">·</span> Brampton, ON
             </motion.div>
 
             <motion.h1
@@ -69,7 +87,7 @@ export function Hero() {
                 Start free assessment
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
               </Link>
-              <Link href="#process" className="btn-ghost group">
+              <Link href="/#process" className="btn-ghost group">
                 <PlayCircle className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
                 Review our process
               </Link>
@@ -87,33 +105,11 @@ export function Hero() {
               </div>
               <div className="hidden sm:block h-3 w-px bg-[#0d1730]/15" />
               <div className="flex items-center gap-2.5">
-                <Award className="h-4 w-4 text-[#3e94c7]" strokeWidth={1.8} />
-                <span>97% first‑time approval rate</span>
+                <Landmark className="h-4 w-4 text-[#3e94c7]" strokeWidth={1.8} />
+                <span>Brampton, Ontario office</span>
               </div>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1.2, delay: 1.0 }}
-              className="mt-14 grid max-w-xl grid-cols-3 gap-8 border-t border-[#0d1730]/10 pt-8"
-            >
-              {[
-                { k: "4,800+", v: "Files represented" },
-                { k: "60+", v: "Countries of origin" },
-                { k: "12 yrs", v: "In practice" },
-              ].map((s, i) => (
-                <div key={s.v} className="relative">
-                  {i > 0 && (
-                    <span className="absolute -left-4 top-1.5 bottom-1.5 w-px bg-[#0d1730]/10" />
-                  )}
-                  <div className="font-display text-[28px] md:text-[34px] tracking-tight text-[#0d1730]">{s.k}</div>
-                  <div className="mt-1.5 text-[10.5px] uppercase tracking-[0.18em] text-[#6b7585] font-mono">
-                    {s.v}
-                  </div>
-                </div>
-              ))}
-            </motion.div>
           </div>
 
           <div className="relative hidden lg:block">
@@ -133,78 +129,109 @@ export function Hero() {
                   <div className="flex items-center gap-2.5">
                     <span className="h-2 w-2 rounded-full bg-[#67b219] pulse-glow" />
                     <span className="text-[10.5px] uppercase tracking-[0.22em] text-[#2a3548] font-mono font-semibold">
-                      Live · Express Entry
+                      Latest · Express Entry
                     </span>
                   </div>
-                  <span className="text-[10.5px] font-mono text-[#3e94c7] font-semibold">Draw № 329</span>
+                  {latest && (
+                    <span className="text-[10.5px] font-mono text-[#3e94c7] font-semibold">
+                      Draw № {latest.number}
+                    </span>
+                  )}
                 </div>
 
-                <div className="relative mt-6">
-                  <div className="text-[10.5px] uppercase tracking-[0.22em] text-[#6b7585] font-mono">Latest cut‑off</div>
-                  <div className="mt-2 flex items-baseline gap-3">
-                    <div className="font-display text-[68px] leading-none tracking-[-0.03em] text-[#0d1730]">
-                      497
+                {latest ? (
+                  <>
+                    <div className="relative mt-6">
+                      <div className="text-[10.5px] uppercase tracking-[0.22em] text-[#6b7585] font-mono">
+                        Minimum CRS
+                      </div>
+                      <div className="mt-2 flex items-baseline gap-3">
+                        <div className="font-display text-[68px] leading-none tracking-[-0.03em] text-[#0d1730]">
+                          {latest.crs}
+                        </div>
+                        {delta !== null && previous && (
+                          <div className="flex flex-col text-[11px]">
+                            <span
+                              className={`font-semibold ${
+                                delta <= 0 ? "text-[#67b219]" : "text-[#b3122a]"
+                              }`}
+                            >
+                              {delta === 0 ? "No change" : `${delta < 0 ? "▼" : "▲"} ${Math.abs(delta)} pts`}
+                            </span>
+                            <span className="text-[#6b7585]">vs. last same-type draw (#{previous.number})</span>
+                          </div>
+                        )}
+                      </div>
+                      <div className="mt-3 text-[12px] text-[#4a5462] leading-[1.5]">
+                        {latest.name}
+                      </div>
                     </div>
-                    <div className="flex flex-col text-[11px]">
-                      <span className="text-[#67b219] font-semibold">▼ 3 pts</span>
-                      <span className="text-[#6b7585]">vs. Apr 12</span>
+
+                    <div className="relative mt-6 grid grid-cols-2 gap-3 text-sm">
+                      <div className="rounded-2xl border border-[#0d1730]/[0.08] bg-[#3e94c7]/[0.06] p-3.5">
+                        <div className="text-[10px] uppercase tracking-[0.18em] text-[#6b7585] font-mono">
+                          ITAs issued
+                        </div>
+                        <div className="mt-1.5 text-[#0d1730] font-display text-lg">
+                          {latest.size.toLocaleString("en-CA")}
+                        </div>
+                      </div>
+                      <div className="rounded-2xl border border-[#0d1730]/[0.08] bg-[#67b219]/[0.07] p-3.5">
+                        <div className="text-[10px] uppercase tracking-[0.18em] text-[#6b7585] font-mono">
+                          Draw date
+                        </div>
+                        <div className="mt-1.5 text-[#0d1730] font-display text-lg">
+                          {formatDate(latest.date)}
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
 
-                <div className="relative mt-6 grid grid-cols-2 gap-3 text-sm">
-                  <div className="rounded-2xl border border-[#0d1730]/[0.08] bg-[#3e94c7]/[0.06] p-3.5">
-                    <div className="text-[10px] uppercase tracking-[0.18em] text-[#6b7585] font-mono">
-                      ITAs issued
-                    </div>
-                    <div className="mt-1.5 text-[#0d1730] font-display text-lg">3,750</div>
-                  </div>
-                  <div className="rounded-2xl border border-[#0d1730]/[0.08] bg-[#67b219]/[0.07] p-3.5">
-                    <div className="text-[10px] uppercase tracking-[0.18em] text-[#6b7585] font-mono">
-                      Processing
-                    </div>
-                    <div className="mt-1.5 text-[#0d1730] font-display text-lg">~5 mo.</div>
-                  </div>
-                </div>
+                    {poolSize !== null && (
+                      <>
+                        <div className="relative mt-6 hairline" />
+                        <div className="relative mt-5 flex items-center justify-between text-[12px] text-[#2a3548]">
+                          <span>Candidates in the pool</span>
+                          <span className="font-mono text-[#0d1730] font-semibold">
+                            {poolSize.toLocaleString("en-CA")}
+                          </span>
+                        </div>
+                      </>
+                    )}
 
-                <div className="relative mt-6 hairline" />
+                    <a
+                      href={latest.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="relative mt-4 inline-flex items-center gap-1 text-[11px] font-mono uppercase tracking-[0.16em] text-[#2a6e95] hover:text-[#0d1730] transition"
+                    >
+                      Source: IRCC
+                      <ArrowUpRight className="h-3 w-3" />
+                    </a>
+                  </>
+                ) : (
+                  <p className="relative mt-6 text-[14px] text-[#4a5462] leading-[1.6]">
+                    Live draw data is temporarily unavailable. See the latest
+                    rounds on{" "}
+                    <a
+                      href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/rounds-invitations.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#2a6e95] underline underline-offset-4"
+                    >
+                      Canada.ca
+                    </a>
+                    .
+                  </p>
+                )}
 
-                <div className="relative mt-5 flex items-center justify-between text-[12px] text-[#2a3548]">
-                  <span>Your estimated CRS</span>
-                  <span className="font-mono text-[#0d1730] font-semibold">512</span>
-                </div>
-                <div className="relative mt-2.5 h-1.5 overflow-hidden rounded-full bg-[#0d1730]/[0.08]">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={{ width: "78%" }}
-                    transition={{ duration: 1.6, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
-                    className="h-full rounded-full bg-gradient-to-r from-[#67b219] via-[#84c739] to-[#3e94c7]"
-                  />
-                </div>
-
-                <button className="relative mt-7 w-full btn-primary justify-center text-[13.5px]">
+                <Link
+                  href="/assessment"
+                  className="relative mt-7 w-full btn-primary justify-center text-[13.5px]"
+                >
                   Get a free CRS assessment
                   <ArrowRight className="h-4 w-4" />
-                </button>
+                </Link>
               </div>
-
-              {/* Floating chips */}
-              <motion.div
-                animate={{ y: [0, -7, 0] }}
-                transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -left-12 top-12 hidden md:flex items-center gap-2.5 rounded-full glass px-3.5 py-2 text-[11px] text-[#0d1730]"
-              >
-                <Plane className="h-3.5 w-3.5 text-[#3e94c7]" strokeWidth={2} />
-                <span className="font-mono uppercase tracking-[0.16em] font-semibold">PR · Priya S.</span>
-              </motion.div>
-              <motion.div
-                animate={{ y: [0, 7, 0] }}
-                transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
-                className="absolute -right-4 bottom-6 hidden md:flex items-center gap-2.5 rounded-full glass px-3.5 py-2 text-[11px] text-[#0d1730]"
-              >
-                <Globe2 className="h-3.5 w-3.5 text-[#67b219]" strokeWidth={2} />
-                <span className="font-mono uppercase tracking-[0.16em] font-semibold">Work · Lucas M.</span>
-              </motion.div>
             </motion.div>
           </div>
         </div>

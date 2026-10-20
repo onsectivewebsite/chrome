@@ -61,7 +61,7 @@ export function CTA() {
                   className="flex items-start gap-3.5 rounded-2xl border border-[#3e94c7]/10 bg-[#3e94c7]/[0.025] p-4 transition hover:border-[#3e94c7]/[0.22] hover:bg-[#3e94c7]/[0.04]"
                 >
                   <CheckCircle2 className="mt-0.5 h-5 w-5 text-[#3e94c7] shrink-0" strokeWidth={1.5} />
-                  <span className="text-[14px] text-[#0d1730]] leading-[1.55]">{t}</span>
+                  <span className="text-[14px] text-[#0d1730] leading-[1.55]">{t}</span>
                 </li>
               ))}
             </ul>

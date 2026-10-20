@@ -21,7 +21,7 @@ const steps = [
   {
     icon: FileSearch,
     title: "Documentation",
-    desc: "Evidence collection — work references, ECAs, language tests, police certificates, medicals — assembled and reviewed in a secure client portal.",
+    desc: "Evidence collection — work references, ECAs, language tests, police certificates, medicals — assembled and reviewed against a file-specific checklist.",
     time: "Weeks 2–6",
     no: "III",
   },

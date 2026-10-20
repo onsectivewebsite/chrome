@@ -13,9 +13,9 @@ const pillars = [
   },
   {
     icon: Gauge,
-    title: "Engineered for speed.",
+    title: "Organised from day one.",
     desc:
-      "Our proprietary case system shaves weeks off documentation and submission cycles without cutting corners on quality.",
+      "A documented checklist and timeline for every file, so documents are gathered once and submissions go out complete.",
     no: "02",
   },
   {
@@ -29,7 +29,7 @@ const pillars = [
     icon: Lock,
     title: "Your data, your control.",
     desc:
-      "Bank‑grade encryption, access logs, and a private client portal. No PDFs floating in inboxes. Ever.",
+      "Your documents are used only for your file and handled under CICC confidentiality standards and Canadian privacy law.",
     no: "04",
   },
   {
@@ -43,7 +43,7 @@ const pillars = [
     icon: LineChart,
     title: "Transparent outcomes.",
     desc:
-      "Weekly progress, honest timelines, and a post‑mortem on every refusal we take on — we earn trust with evidence.",
+      "Honest timelines, clear fees in writing, and a frank view of risk before you commit to anything.",
     no: "06",
   },
 ];
@@ -96,7 +96,7 @@ export function WhyUs() {
               <h3 className="mt-7 font-display text-[24px] font-medium tracking-tight text-[#0d1730] leading-[1.15]">
                 {p.title}
               </h3>
-              <p className="mt-3 text-[14px] text-[#4a5462]] leading-[1.7]">
+              <p className="mt-3 text-[14px] text-[#4a5462] leading-[1.7]">
                 {p.desc}
               </p>
             </motion.div>

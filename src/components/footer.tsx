@@ -1,57 +1,45 @@
 import Link from "next/link";
 import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 import { BrandMark } from "./brand";
+import { SITE } from "@/lib/site";
 
-function SocialIcon({ name }: { name: "linkedin" | "instagram" | "facebook" | "youtube" }) {
-  const common = "h-4 w-4";
-  if (name === "linkedin")
-    return (
-      <svg viewBox="0 0 24 24" fill="currentColor" className={common} aria-hidden>
-        <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S.02 4.88.02 3.5 1.13 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8h4.52v15H.24V8zm7.57 0h4.33v2.05h.06c.6-1.13 2.07-2.33 4.26-2.33 4.56 0 5.4 3 5.4 6.9V23h-4.5v-6.76c0-1.61-.03-3.68-2.24-3.68-2.24 0-2.58 1.75-2.58 3.56V23H7.8V8z" />
-      </svg>
-    );
-  if (name === "instagram")
-    return (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className={common} aria-hidden>
-        <rect x="3" y="3" width="18" height="18" rx="5" />
-        <circle cx="12" cy="12" r="4" />
-        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-      </svg>
-    );
-  if (name === "facebook")
-    return (
-      <svg viewBox="0 0 24 24" fill="currentColor" className={common} aria-hidden>
-        <path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.6 1.6-1.6h1.7V4.2C16.4 4.1 15.4 4 14.2 4c-2.5 0-4.2 1.5-4.2 4.3v2.5H7v3.2h3V22h3.5z" />
-      </svg>
-    );
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={common} aria-hidden>
-      <path d="M23.5 6.5a3 3 0 0 0-2.1-2.1C19.5 4 12 4 12 4s-7.5 0-9.4.4A3 3 0 0 0 .5 6.5C.1 8.4.1 12 .1 12s0 3.6.4 5.5a3 3 0 0 0 2.1 2.1C4.5 20 12 20 12 20s7.5 0 9.4-.4a3 3 0 0 0 2.1-2.1c.4-1.9.4-5.5.4-5.5s0-3.6-.4-5.5zM9.75 15.5v-7l6 3.5-6 3.5z" />
-    </svg>
-  );
-}
+type FooterLink = { label: string; href: string; external?: boolean };
 
-const cols = [
+const IRCC = "https://www.canada.ca/en/immigration-refugees-citizenship";
+
+const cols: { title: string; links: FooterLink[] }[] = [
   {
     title: "Practice",
     links: [
-      "Express Entry",
-      "Provincial Nominee",
-      "Work Permits",
-      "Study Permits",
-      "Family Sponsorship",
-      "Business Immigration",
-      "Citizenship",
-      "LMIA",
+      { label: "Express Entry", href: "/#services" },
+      { label: "Provincial Nominee", href: "/#services" },
+      { label: "Work Permits & LMIA", href: "/#services" },
+      { label: "Study Permits", href: "/#services" },
+      { label: "Family Sponsorship", href: "/#services" },
+      { label: "Business Immigration", href: "/#services" },
+      { label: "Citizenship & Appeals", href: "/#services" },
     ],
   },
   {
     title: "Firm",
-    links: ["About Us", "Our Team", "Careers", "Success Stories", "Insights", "Privacy Policy", "Terms of Service"],
+    links: [
+      { label: "Our Process", href: "/#process" },
+      { label: "Free Assessment", href: "/assessment" },
+      { label: "Newsroom", href: "/news" },
+      { label: "Contact", href: "/#contact" },
+      { label: "Privacy Policy", href: "/privacy" },
+      { label: "Terms of Use", href: "/terms" },
+    ],
   },
   {
-    title: "Resources",
-    links: ["CRS Calculator", "Eligibility Check", "NOC Finder", "Document Checklist", "Processing Times", "FAQs"],
+    title: "Official Tools",
+    links: [
+      { label: "CRS Calculator", href: `${IRCC}/services/immigrate-canada/express-entry/check-score.html`, external: true },
+      { label: "Eligibility Check", href: `${IRCC}/services/come-canada-tool-immigration-express-entry.html`, external: true },
+      { label: "NOC Finder", href: "https://noc.esdc.gc.ca/", external: true },
+      { label: "Processing Times", href: `${IRCC}/services/application/check-processing-times.html`, external: true },
+      { label: "Verify an RCIC", href: "https://register.college-ic.ca/Public-Register-EN/RCIC_Search.aspx", external: true },
+    ],
   },
 ];
 
@@ -96,23 +84,6 @@ export function Footer() {
                 8450 Creditview Rd, Brampton, ON L6Y 0G4
               </div>
             </div>
-            <div className="flex items-center gap-2">
-              {([
-                { name: "linkedin", label: "LinkedIn" },
-                { name: "instagram", label: "Instagram" },
-                { name: "facebook", label: "Facebook" },
-                { name: "youtube", label: "YouTube" },
-              ] as const).map(({ name, label }) => (
-                <a
-                  key={label}
-                  href="#"
-                  aria-label={label}
-                  className="grid h-10 w-10 place-items-center rounded-xl border border-[#3e94c7]/[0.12] bg-[#3e94c7]/[0.025] text-[#4a5462] hover:text-[#3e94c7] hover:border-[#3e94c7]/35 hover:bg-[#3e94c7]/[0.06] transition"
-                >
-                  <SocialIcon name={name} />
-                </a>
-              ))}
-            </div>
           </div>
 
           {cols.map((col) => (
@@ -122,14 +93,26 @@ export function Footer() {
               </h4>
               <ul className="mt-6 space-y-3.5 text-[13.5px]">
                 {col.links.map((l) => (
-                  <li key={l}>
-                    <Link
-                      href="#"
-                      className="group inline-flex items-center gap-1.5 text-[#6b7585] hover:text-[#0d1730] transition"
-                    >
-                      {l}
-                      <ArrowUpRight className="h-3 w-3 opacity-0 group-hover:opacity-70 -translate-x-1 group-hover:translate-x-0 transition" />
-                    </Link>
+                  <li key={l.label}>
+                    {l.external ? (
+                      <a
+                        href={l.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group inline-flex items-center gap-1.5 text-[#6b7585] hover:text-[#0d1730] transition"
+                      >
+                        {l.label}
+                        <ArrowUpRight className="h-3 w-3 opacity-40 group-hover:opacity-80 transition" />
+                      </a>
+                    ) : (
+                      <Link
+                        href={l.href}
+                        className="group inline-flex items-center gap-1.5 text-[#6b7585] hover:text-[#0d1730] transition"
+                      >
+                        {l.label}
+                        <ArrowUpRight className="h-3 w-3 opacity-0 group-hover:opacity-70 -translate-x-1 group-hover:translate-x-0 transition" />
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -140,8 +123,8 @@ export function Footer() {
         <div className="mt-20 hairline" />
         <div className="mt-7 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[11.5px] text-[#6b7585]">
           <p>
-            © {new Date().getFullYear()} Chrome Visa Solutions Inc. — RCIC #R000000.
-            All rights reserved.
+            © {new Date().getFullYear()} Chrome Visa Solutions Inc.
+            {SITE.rcicNumber && <> — RCIC {SITE.rcicNumber}.</>} All rights reserved.
           </p>
           <p className="font-mono tracking-[0.18em] uppercase text-[10.5px]">
             Brampton · Ontario · Canada

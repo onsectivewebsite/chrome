@@ -14,6 +14,7 @@ import {
   Clock,
 } from "lucide-react";
 import { BrandMark } from "./brand";
+import { SITE } from "@/lib/site";
 
 const nav = [
   {
@@ -30,7 +31,6 @@ const nav = [
   },
   { label: "Process", href: "/#process" },
   { label: "About", href: "/#about" },
-  { label: "Stories", href: "/#testimonials" },
   { label: "Newsroom", href: "/news" },
   { label: "Assessment", href: "/assessment" },
   { label: "Contact", href: "/#contact" },
@@ -91,7 +91,9 @@ export function Navbar() {
                 <span className="inline-flex items-center gap-1.5 uppercase tracking-[0.18em] text-[10.5px]">
                   <ShieldCheck className="h-3 w-3 text-[#67b219]" strokeWidth={2.2} />
                   <span className="font-semibold text-[#0d1730]">CICC</span>
-                  <span className="text-[#6b7585]">RCIC #R000000</span>
+                  <span className="text-[#6b7585]">
+                    RCIC{SITE.rcicNumber ? ` ${SITE.rcicNumber}` : ""}
+                  </span>
                 </span>
               </div>
             </div>

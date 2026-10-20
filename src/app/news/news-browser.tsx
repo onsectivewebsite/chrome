@@ -1,59 +1,38 @@
 "use client";
 
-import Link from "next/link";
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { Search, ArrowUpRight, X, Newspaper } from "lucide-react";
-import type { NewsItem, NewsCategory } from "@/data/news";
+import { TYPE_TINT, DEFAULT_TINT, formatDate } from "@/lib/format";
 
-const CATEGORY_TINT: Record<string, string> = {
-  "Express Entry": "bg-[#67b219]/[0.10] text-[#4f8a13] border-[#67b219]/30",
-  "Provincial Nominee": "bg-[#3e94c7]/[0.10] text-[#2a6e95] border-[#3e94c7]/30",
-  "Study Permit": "bg-[#84c739]/[0.10] text-[#4f8a13] border-[#84c739]/30",
-  "Work Permit": "bg-[#3e94c7]/[0.10] text-[#2a6e95] border-[#3e94c7]/30",
-  "Family Sponsorship": "bg-[#67b219]/[0.10] text-[#4f8a13] border-[#67b219]/30",
-  "Citizenship": "bg-[#3e94c7]/[0.10] text-[#2a6e95] border-[#3e94c7]/30",
-  "LMIA": "bg-[#84c739]/[0.10] text-[#4f8a13] border-[#84c739]/30",
-  "Start-up Visa": "bg-[#67b219]/[0.10] text-[#4f8a13] border-[#67b219]/30",
-  "Refugee & Asylum": "bg-[#3e94c7]/[0.10] text-[#2a6e95] border-[#3e94c7]/30",
-  "Processing Times": "bg-[#84c739]/[0.10] text-[#4f8a13] border-[#84c739]/30",
-  "Policy Update": "bg-[#3e94c7]/[0.10] text-[#2a6e95] border-[#3e94c7]/30",
-  "Court Decision": "bg-[#67b219]/[0.10] text-[#4f8a13] border-[#67b219]/30",
-  "Industry Analysis": "bg-[#84c739]/[0.10] text-[#4f8a13] border-[#84c739]/30",
-  "Settlement": "bg-[#3e94c7]/[0.10] text-[#2a6e95] border-[#3e94c7]/30",
+export type FeedItem = {
+  id: string;
+  title: string;
+  summary: string;
+  url: string;
+  date: string;
+  type: string;
 };
-
-function formatDate(iso: string): string {
-  return new Date(iso).toLocaleDateString("en-CA", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-  });
-}
 
 const PAGE = 24;
 
-export function NewsBrowser({
-  items,
-  categories,
-}: {
-  items: NewsItem[];
-  categories: NewsCategory[];
-}) {
-  const [active, setActive] = useState<NewsCategory | "All">("All");
+export function NewsBrowser({ items }: { items: FeedItem[] }) {
+  const categories = useMemo(
+    () => Array.from(new Set(items.map((it) => it.type))).sort(),
+    [items],
+  );
+  const [active, setActive] = useState<string>("All");
   const [query, setQuery] = useState("");
   const [visibleCount, setVisibleCount] = useState(PAGE);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     return items.filter((it) => {
-      if (active !== "All" && it.category !== active) return false;
+      if (active !== "All" && it.type !== active) return false;
       if (!q) return true;
       return (
         it.title.toLowerCase().includes(q) ||
-        it.summary.toLowerCase().includes(q) ||
-        it.tags.some((t) => t.toLowerCase().includes(q)) ||
-        (it.province ?? "").toLowerCase().includes(q)
+        it.summary.toLowerCase().includes(q)
       );
     });
   }, [items, active, query]);
@@ -61,7 +40,7 @@ export function NewsBrowser({
   const counts = useMemo(() => {
     const m: Record<string, number> = { All: items.length };
     for (const c of categories) m[c] = 0;
-    for (const it of items) m[it.category] = (m[it.category] ?? 0) + 1;
+    for (const it of items) m[it.type] = (m[it.type] ?? 0) + 1;
     return m;
   }, [items, categories]);
 
@@ -77,19 +56,20 @@ export function NewsBrowser({
 
         <div className="relative mx-auto max-w-7xl px-6">
           <span className="eyebrow">
-            <span className="rule-gold" /> Newsroom · {items.length.toLocaleString()} stories
+            <span className="rule-gold" /> Newsroom · Live from IRCC
           </span>
           <h1 className="mt-7 font-display text-[clamp(2.6rem,5.6vw,5rem)] font-medium leading-[1.05] tracking-[-0.018em] text-[#0d1730]">
             Canadian immigration newsroom.
           </h1>
           <p className="mt-7 max-w-2xl text-[17px] md:text-[18px] text-[#4a5462] leading-[1.7]">
-            Express Entry draws, PNP results, IRCC operational bulletins,
-            Federal Court decisions and processing-time updates — summarised
-            from{" "}
-            <span className="text-[#0d1730] font-medium">CIC News</span>,{" "}
-            <span className="text-[#0d1730] font-medium">Canada.ca</span>, the{" "}
-            <span className="text-[#0d1730] font-medium">Federal Court</span>, and
-            provincial nominee channels. Indexed and fully searchable.
+            News releases, backgrounders and statements from{" "}
+            <span className="text-[#0d1730] font-medium">
+              Immigration, Refugees and Citizenship Canada
+            </span>
+            , plus every Express Entry round of invitations — pulled live from
+            official{" "}
+            <span className="text-[#0d1730] font-medium">Canada.ca</span> feeds
+            and refreshed hourly. Each item links to the original source.
           </p>
 
           {/* Search */}
@@ -98,7 +78,7 @@ export function NewsBrowser({
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-[#6b7585]" />
               <input
                 type="search"
-                placeholder="Search 780 stories — Express Entry, PNP, study permits, court rulings…"
+                placeholder={`Search ${items.length.toLocaleString()} items — Express Entry, study permits, CRS…`}
                 value={query}
                 onChange={(e) => {
                   setQuery(e.target.value);
@@ -111,7 +91,7 @@ export function NewsBrowser({
                   type="button"
                   onClick={() => setQuery("")}
                   aria-label="Clear search"
-                  className="absolute right-3 top-1/2 -translate-y-1/2 grid h-7 w-7 place-items-center rounded-full hover:bg-[#0d1730]/05 text-[#6b7585]"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 grid h-7 w-7 place-items-center rounded-full hover:bg-[#0d1730]/[0.05] text-[#6b7585]"
                 >
                   <X className="h-4 w-4" />
                 </button>
@@ -156,7 +136,7 @@ export function NewsBrowser({
           <div className="flex items-center justify-between text-[12.5px] font-mono uppercase tracking-[0.18em] text-[#6b7585]">
             <span>
               Showing <span className="text-[#0d1730] font-semibold">{visible.length}</span> of{" "}
-              <span className="text-[#0d1730] font-semibold">{filtered.length}</span> stories
+              <span className="text-[#0d1730] font-semibold">{filtered.length}</span> items
               {active !== "All" && (
                 <>
                   {" "}
@@ -166,7 +146,22 @@ export function NewsBrowser({
             </span>
           </div>
 
-          {filtered.length === 0 ? (
+          {items.length === 0 ? (
+            <div className="mt-16 grid place-items-center text-center">
+              <Newspaper className="h-10 w-10 text-[#6b7585]" strokeWidth={1.4} />
+              <p className="mt-4 font-display text-[20px] text-[#0d1730]">
+                The IRCC feeds are temporarily unavailable.
+              </p>
+              <a
+                href="https://www.canada.ca/en/immigration-refugees-citizenship/news.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 text-[14px] text-[#2a6e95] underline underline-offset-4"
+              >
+                Read IRCC news on Canada.ca
+              </a>
+            </div>
+          ) : filtered.length === 0 ? (
             <div className="mt-16 grid place-items-center text-center">
               <Newspaper className="h-10 w-10 text-[#6b7585]" strokeWidth={1.4} />
               <p className="mt-4 font-display text-[20px] text-[#0d1730]">
@@ -182,37 +177,40 @@ export function NewsBrowser({
               className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
             >
               {visible.map((it) => (
-                <Link
+                <a
                   key={it.id}
-                  href={`/news/${it.slug}`}
+                  href={it.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="card-hover glass group relative flex h-full flex-col overflow-hidden rounded-[20px] p-6"
                 >
                   <div className="flex items-center gap-2">
                     <span
                       className={`inline-flex items-center rounded-full border px-2 py-0.5 text-[9.5px] uppercase tracking-[0.16em] font-mono font-semibold ${
-                        CATEGORY_TINT[it.category] ??
-                        "bg-[#3e94c7]/[0.10] text-[#2a6e95] border-[#3e94c7]/30"
+                        TYPE_TINT[it.type] ?? DEFAULT_TINT
                       }`}
                     >
-                      {it.category}
+                      {it.type}
                     </span>
                     <span className="text-[10.5px] font-mono text-[#6b7585]">
-                      {formatDate(it.publishedAt)}
+                      {formatDate(it.date)}
                     </span>
                   </div>
                   <h3 className="mt-3 font-display text-[16px] leading-[1.35] tracking-tight text-[#0d1730] group-hover:text-[#2a6e95] transition line-clamp-3">
                     {it.title}
                   </h3>
-                  <p className="mt-2 text-[12.5px] text-[#4a5462] leading-[1.55] line-clamp-3">
-                    {it.summary}
-                  </p>
+                  {it.summary && (
+                    <p className="mt-2 text-[12.5px] text-[#4a5462] leading-[1.55] line-clamp-3">
+                      {it.summary}
+                    </p>
+                  )}
                   <div className="mt-auto flex items-center justify-between pt-5">
                     <span className="font-mono text-[10.5px] text-[#6b7585]">
-                      {it.source}
+                      Canada.ca
                     </span>
                     <ArrowUpRight className="h-3.5 w-3.5 text-[#67b219] opacity-50 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition" />
                   </div>
-                </Link>
+                </a>
               ))}
             </motion.div>
           )}
@@ -259,7 +257,7 @@ function Chip({
       <span>{label}</span>
       <span
         className={`text-[10.5px] font-mono px-1.5 py-0.5 rounded-full ${
-          active ? "bg-white/20 text-white" : "bg-[#0d1730]/05 text-[#6b7585]"
+          active ? "bg-white/20 text-white" : "bg-[#0d1730]/[0.05] text-[#6b7585]"
         }`}
       >
         {count}

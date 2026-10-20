@@ -2,7 +2,9 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import Link from "next/link";
 import { ArrowRight, Mail, Phone, MapPin, Shield, Loader2, CheckCircle2 } from "lucide-react";
+import { submitForm } from "@/lib/submit";
 
 const pathways = [
   "Express Entry",
@@ -16,6 +18,7 @@ const pathways = [
 
 export function Contact() {
   const [state, setState] = useState<"idle" | "sending" | "sent">("idle");
+  const [error, setError] = useState<string | null>(null);
 
   return (
     <section id="contact" className="relative py-32 sm:py-40">
@@ -85,7 +88,7 @@ export function Contact() {
                 <span className="grid h-11 w-11 place-items-center rounded-xl bg-[#67b219]/[0.12] border border-[#67b219]/25 text-[#4f8a13]">
                   <Shield className="h-4 w-4" strokeWidth={1.8} />
                 </span>
-                <div className="text-[13px] text-[#2a3548]] leading-[1.55]">
+                <div className="text-[13px] text-[#2a3548] leading-[1.55]">
                   Your information is handled under <span className="text-[#3e94c7]">CICC confidentiality standards</span>.
                   We never share, sell, or spam.
                 </div>
@@ -98,15 +101,26 @@ export function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
+              const form = e.currentTarget;
               setState("sending");
-              setTimeout(() => setState("sent"), 1200);
+              setError(null);
+              const err = await submitForm(form);
+              if (err) {
+                setError(err);
+                setState("idle");
+              } else {
+                form.reset();
+                setState("sent");
+              }
             }}
             className="glass-strong rounded-[28px] p-7 md:p-9 relative"
           >
             <div className="pointer-events-none absolute inset-3 rounded-[22px] border border-[#3e94c7]/[0.08]" />
             <div className="relative">
+              <input type="hidden" name="formType" value="enquiry" />
+              <input type="text" name="company_website" tabIndex={-1} autoComplete="off" aria-hidden className="hidden" />
               <div className="grid gap-4 md:grid-cols-2">
                 <Field label="Full name" name="name" placeholder="Jane Kaur" required />
                 <Field label="Email" name="email" type="email" placeholder="you@email.com" required />
@@ -149,8 +163,12 @@ export function Contact() {
                   className="mt-0.5 h-4 w-4 rounded border-[#3e94c7]/25 bg-[#3e94c7]/[0.08] text-[#3e94c7] focus:ring-[#3e94c7]/35"
                 />
                 <span>
-                  I agree that Chrome Visa Solution may contact me about my
-                  enquiry. I&apos;ve read the privacy policy.
+                  I agree that Chrome Visa Solutions may contact me about my
+                  enquiry. I&apos;ve read the{" "}
+                  <Link href="/privacy" className="underline underline-offset-2 hover:text-[#0d1730]">
+                    privacy policy
+                  </Link>
+                  .
                 </span>
               </label>
 
@@ -175,6 +193,12 @@ export function Contact() {
                   </>
                 )}
               </button>
+              {error && (
+                <p role="alert" className="mt-4 text-[13px] text-[#b3122a] text-center">
+                  {error} <a href="mailto:info@chromevisa.ca" className="underline">info@chromevisa.ca</a> ·{" "}
+                  <a href="tel:+16475374581" className="underline">+1 (647) 537‑4581</a>
+                </p>
+              )}
             </div>
           </motion.form>
         </div>

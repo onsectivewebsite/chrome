@@ -33,13 +33,10 @@ function Counter({
   );
 }
 
-export function Stats() {
-  const items = [
-    { k: 4800, suffix: "+", label: "Successful applications", sub: "Across 60+ nationalities" },
-    { k: 97, suffix: "%", label: "First‑time approval rate", sub: "Above industry average of 62%" },
-    { k: 12, suffix: "yrs", label: "Licensed experience", sub: "CICC‑regulated since 2013" },
-    { k: 48, suffix: "h", label: "Avg. response time", sub: "Dedicated case manager" },
-  ];
+export type StatItem = { k: number; suffix?: string; label: string; sub: string };
+
+export function Stats({ items, year }: { items: StatItem[]; year: number }) {
+  if (items.length === 0) return null;
   return (
     <section id="about" className="relative py-32">
       <div className="mx-auto max-w-7xl px-6">
@@ -52,31 +49,24 @@ export function Stats() {
         >
           <div>
             <span className="eyebrow">
-              <span className="rule-gold" /> Outcomes
+              <span className="rule-gold" /> Express Entry · {year}
             </span>
             <h2 className="mt-7 font-display text-[clamp(2.2rem,4.6vw,4.2rem)] font-medium leading-[1.1] tracking-[-0.018em] text-[#0d1730]">
-              Twelve years on the record.
+              The {year} Express Entry picture.
             </h2>
             <p className="mt-7 max-w-md text-[16px] text-[#4a5462] leading-[1.7]">
-              We publish the real numbers behind our practice — first‑time
-              approval rate, response times, and case volume — so prospective
-              clients can choose on evidence rather than marketing.
+              Year-to-date figures calculated from IRCC&apos;s official rounds
+              of invitations, refreshed hourly. We plan every Express Entry
+              file against the draws as they actually happen.
             </p>
-
-            <div className="mt-10 flex items-center gap-4">
-              <div className="flex -space-x-2">
-                {["#67b219", "#3e94c7", "#4f8a13", "#2a6e95"].map((c) => (
-                  <span
-                    key={c}
-                    className="h-8 w-8 rounded-full border-2 border-[#fafbf7] bg-gradient-to-br shadow-[0_4px_12px_-4px_rgba(0,0,0,0.6)]"
-                    style={{ background: `linear-gradient(135deg, ${c}, ${c}80)` }}
-                  />
-                ))}
-              </div>
-              <div className="text-[12.5px] text-[#6b7585]">
-                Trusted by clients from <span className="text-[#3e94c7]">60+ countries</span>
-              </div>
-            </div>
+            <a
+              href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/rounds-invitations.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-1.5 text-[12px] font-mono uppercase tracking-[0.16em] text-[#2a6e95] hover:text-[#0d1730] transition"
+            >
+              Source: IRCC rounds of invitations ↗
+            </a>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
@@ -91,7 +81,7 @@ export function Stats() {
               >
                 <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[#3e94c7]/[0.08] blur-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 <div className="font-display text-[52px] md:text-[58px] leading-none tracking-[-0.03em] text-[#0d1730]">
-                  <Counter to={s.k} suffix={s.suffix} />
+                  <Counter to={s.k} suffix={s.suffix ?? ""} />
                 </div>
                 <div className="mt-4 hairline" />
                 <div className="mt-3 text-[13.5px] font-medium text-[#0d1730]">
